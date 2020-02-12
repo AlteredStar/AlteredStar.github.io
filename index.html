@@ -11,43 +11,12 @@
     font-family: Arial;
   }
 
-  /* Float four columns side by side */
-  .column {
-    float: none;
-    text-align: center;
-    width: 25%;
-    padding: 0 10px;
+  .base {
+    background-color: #808080;
+    color: #F0FFFF;
+    margin: 80px;
+    padding: 40px;
   }
-
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-   display: table;
-   clear: both;
-  }
-
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 150%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #696969;
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 10px;
-  } 
   </style>
     <font color="#F0FFFF">
     <title>My webpage!</title>
@@ -57,40 +26,13 @@
   <body>
     <font color="#F0FFFF">
     <h1> Welcome to Character Creation!</h1>
-    <h4 id='date'> This is the date.</h4>
     <button type="button" onclick="addResponse()"> Start Creation! </button>
     <p id="Q1" style="display:none"> Okay lets begin! </p>
     <br>
-    <center>
-    <div class="column">
-      <br>
-      <div class="row">
-        <div class="card">
-          <h3> Question 1 </h3>
-          <p> You come to a crossroad with 2 paths: one leading to the ocean and the other into the forest, which path do you take. </p>
-          <p> Forest </p>
-          <p> Ocean </p>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="card">
-          <h3> Question 1 </h3>
-          <p> You come to a crossroad with 2 paths: one leading to the ocean and the other into the forest, which path do you take. </p>
-          <p> Forest </p>
-          <p> Ocean </p>
-        </div>
-      </div>
-      <br<
-      <div class="row">
-        <div class="card">
-          <h3> Question 1 </h3>
-          <p> You come to a crossroad with 2 paths: one leading to the ocean and the other into the forest, which path do you take. </p>
-          <p> Forest </p>
-          <p> Ocean </p>
-        </div>
-      </div>
-      </center>
+    <div class="base">
+      <h2> Question </h2>
+      <p style="text-align:center"> This is a question </p>
+    </div>
       
     </font>
   </body>
