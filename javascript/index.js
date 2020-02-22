@@ -54,8 +54,8 @@ function disableButton() {
 }
 
 $("button").click(function() {
-   console.log("activated");
-   var $questions = $(".quest");
+    alert("activated");
+    var $questions = $(".quest");
     if($questions.find("input:radio:checked").length === $questions.length) {
         register();
     }
