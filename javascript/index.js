@@ -14,7 +14,6 @@ function register() {
     var ans = 0;
     for (var i = 0; i < store.length; i++) {
         if (store[i].checked) {
-            if (i==1) {
                 if (store[i].value == "forest") {
                     str += 2;
                     con += 3;
@@ -29,9 +28,7 @@ function register() {
                     cha -= 2;
                     ans++;
                 }
-            }
-            
-            if (i==2) {
+                
                 if (store[i].value == "police") {
                     cha += 7;
                     ans++;
@@ -46,7 +43,7 @@ function register() {
                     int += 3;
                     ans++;
                 }  
-            }
+            
         }
     }
         output = output 
