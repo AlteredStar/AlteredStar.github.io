@@ -46,7 +46,6 @@ function register() {
             + "Wisdom: " + wis + "<br>"
             + "Charisma: " + cha + "<br>";
         document.getElementById("result").innerHTML = output;
-        disableButton();
 }
 
 disableButton() {
