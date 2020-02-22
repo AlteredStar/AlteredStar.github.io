@@ -57,7 +57,7 @@ function register() {
             document.getElementById("result").innerHTML = "you did not answer all the questions :(";
         }
         if (ans > 1) {
-            document.getElementById("result").innerHTML = output + ans;
+            document.getElementById("result").innerHTML = output;
             disableButton();
         }
         
