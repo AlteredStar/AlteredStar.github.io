@@ -1,12 +1,12 @@
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-var str = 0;
-var dex = 0;
-var con = 0;
-var int = 0;
-var wis = 0;
-var cha = 0;
+var str = 10;
+var dex = 10;
+var con = 10;
+var int = 10;
+var wis = 10;
+var cha = 10;
 
 function register() {
     var store = document.forms[0];
