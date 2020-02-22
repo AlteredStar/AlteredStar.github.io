@@ -51,8 +51,8 @@ function register() {
             + "Constitution: " + con + "<br>"
             + "Intelligence: " + int + "<br>"
             + "Wisdom: " + wis + "<br>"
-            + "Charisma: " + cha + "<br>"
-            + "Answers: " + ans;
+            + "Charisma: " + cha + "<br>";
+    
         if (!(ans == 2)) {
             document.getElementById("result").innerHTML = "you did not answer all the questions :(";
         }
