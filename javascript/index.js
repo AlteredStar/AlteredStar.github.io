@@ -13,8 +13,18 @@ form.addEventListener("submit", function(event) {
     var output = "";
     for (const entry of data) {
         if (entry[1] == "mansion")
-            str = str + 5;
-        output = output + entry[1] + "str: " + str + "\r" + "dex: " + dex + "\r";   
+            cha += 5;
+        if (entry[1] == "forest")
+            str += 5;
+        if (entry[1] == "home")
+            int += 5;
+        output = output 
+            + "str: " + str + "\r" 
+            + "dex: " + dex + "\r" 
+            + "con: " + con + "\r"
+            + "int: " + int + "\r"
+            + "wis: " + wis + "\r"
+            + "cha: " + cha + "\r";   
     };
     log.innerText = output;
     event.preventDefault();
