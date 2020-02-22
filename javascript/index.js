@@ -6,7 +6,7 @@ function addResponse() {
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-from.addEventListener("submit", function(event) {
+form.addEventListener("submit", function(event) {
     var data = new FormData(form);
     var output = "";
     for (const entry of data) {
