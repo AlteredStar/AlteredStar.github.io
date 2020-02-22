@@ -1,15 +1,14 @@
 var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
-var str = 10;
-var dex = 10;
-var con = 10;
-var int = 10;
-var wis = 10;
-var cha = 10;
-var ans = 0;
-
 function register() {
+    var str = 10;
+    var dex = 10;
+    var con = 10;
+    var int = 10;
+    var wis = 10;
+    var cha = 10;
+    var ans = 0;
     var store = document.forms[0];
     var output = "";
     for (var i = 0; i < store.length; i++) {
