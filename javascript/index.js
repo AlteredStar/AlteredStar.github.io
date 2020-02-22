@@ -48,6 +48,6 @@ function register() {
         document.getElementById("result").innerHTML = output;
 }
 
-disableButton() {
+function disableButton() {
     document.getElementById("button").disabled = 'true';   
 }
