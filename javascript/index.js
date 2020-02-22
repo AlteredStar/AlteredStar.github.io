@@ -54,14 +54,7 @@ function register() {
             + "Charisma: " + cha + "<br>"
             + "Answers: " + ans;
         if (!(ans == 2)) {
-            document.getElementById("result").innterHTML = "you did not answer all the questions :(";
-            str = 10;
-            dex = 10;
-            con = 10;
-            int = 10;
-            wis = 10;
-            cha = 10;
-            ans = 0;
+            document.getElementById("result").innerHTML = "you did not answer all the questions :(";
         }
         if (ans > 1) {
             document.getElementById("result").innerHTML = output + ans;
