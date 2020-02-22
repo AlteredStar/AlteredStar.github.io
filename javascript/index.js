@@ -13,7 +13,8 @@ function register() {
     var output = "";
     var i;
     for (i = 0; i < store.length; i++) {
-            if (store[i].checked) {
+        if (store[i].checked) {
+            if (i==1) {
                 if (store[i].value == "forest") {
                     str += 2;
                     con += 3;
@@ -25,7 +26,9 @@ function register() {
                     wis += 7;
                     cha -= 2;
                 }
-        
+            }
+            
+            if (i==2) {
                 if (store[i].value == "police") {
                     cha += 7;
                 }
@@ -36,8 +39,9 @@ function register() {
                 if (store[i].value == "take") {
                     dex += 3;
                     int += 3;
-                }   
+                }  
             }
+        }
     }
         output = output 
             + "Strength: " + str + "<br>" 
