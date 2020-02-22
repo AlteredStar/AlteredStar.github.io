@@ -8,30 +8,30 @@ var int = 0;
 var wis = 0;
 var cha = 0;
 
-form.addEventListener("submit", function(event) {
-    var data = new FormData(form);
+function displayRadioValue() {
+    var q1 = document.getElementsByName('q1');
+    var q2 = document.getElementsByName('q2');
     var output = "";
-    for (const entry of data) {
-        if (entry[1] == "mansion") {
+        if (q1[1] == "mansion") {
             cha += 5;
         }
-        if (entry[1] == "forest") {
+        if (q1[1] == "forest") {
             str += 2;
             con += 3;
         }
-        if (entry[1] == "home") {
+        if (q1[1] == "home") {
             wis += 7;
             cha -= 2;
         }
         
-        if (entry[2] == "police") {
+        if (q2[1] == "police") {
             cha += 7;
         }
-        if (entry[2] == "leave") {
+        if (q2[1] == "leave") {
             wis += 5;
             cha -= 1;
         }
-        if (entry[2] == "take") {
+        if (q2[1] == "take") {
             dex += 3;
             int += 3;
         }
@@ -41,8 +41,6 @@ form.addEventListener("submit", function(event) {
             + "con: " + con + "\r"
             + "int: " + int + "\r"
             + "wis: " + wis + "\r"
-            + "cha: " + cha + "\r";   
-    };
-    log.innerText = output;
-    event.preventDefault();
-}, false);
+            + "cha: " + cha + "\r";
+        document.getElementById("result").innerHTML = output;
+}
