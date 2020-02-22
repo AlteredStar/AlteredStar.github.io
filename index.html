@@ -37,23 +37,32 @@
         <p style="text-align:center"> This is a question </p>
         
         <form>
-        <p> Question 1 </p>
+        <h2> Question 1 </h2>
+          <p> 
+            You walk upon a crossroad. 
+            The left path leads to a mansion. 
+            The right path leads to a forest. 
+            The path behind you leads home. 
+            Which path do you choose.
+          </p>
         <div>
           
-          <input type="radio" id="questAnswer1" 
-                 name="quest" value="one">
-          <label for="questAnswer1"> one </label> <BR>
-          <input type="radio" id="questAnswer2" 
-                 name="quest" value="two">
-          <label for="questAnswer2"> two </label> <BR>
-          <input type="radio" id="questAnswer3"
-                 name="quest" value="three">
-          <label for="questAnswer3"> three </label> <BR> <BR>
-          
-        </div>
-        <div>
-          <button type="submit"> Submit </button>  
-        </div>
+          <input type="radio" id="mansion" 
+                 name="q1" value="mansion">
+          <label for="mansion"> The Mansion </label> 
+          <BR>
+          <input type="radio" id="forest" 
+                 name="q1" value="forest">
+          <label for="forest"> The Forest </label> 
+          <BR>
+          <input type="radio" id="home"
+                 name="q1" value="home">
+          <label for="home"> Return Home </label> 
+          <BR><BR>
+          <input type="submit"
+                 value="Submit">
+          <BR><BR><BR>
+          </div>
         </form>
         <pre id="log"> 
         </pre>
