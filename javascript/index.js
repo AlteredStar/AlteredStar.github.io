@@ -39,11 +39,11 @@ function register() {
             }
     }
         output = output 
-            + "Strength: " + str + "\n" 
-            + "Dexterity: " + dex + "\n" 
-            + "Constitution: " + con + "\n"
-            + "Intelligence: " + int + "\n"
-            + "Wisdom: " + wis + "\n"
-            + "Charisma: " + cha + "\n";
+            + "Strength: " + str + "<BR>" 
+            + "Dexterity: " + dex + "<BR>" 
+            + "Constitution: " + con + "<BR>"
+            + "Intelligence: " + int + "<BR>"
+            + "Wisdom: " + wis + "<BR>"
+            + "Charisma: " + cha + "<BR>";
         document.getElementById("result").innerHTML = output;
 }
