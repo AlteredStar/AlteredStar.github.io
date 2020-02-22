@@ -10,7 +10,7 @@ form.addEventListener("submit", function(event) {
     var data = new FormData(form);
     var output = "";
     for (const entry of data) {
-        output = "Your stats are: ";   
+        output = output + entry[0] + "Your stats are: " + entry[1];   
     };
     log.innerText = output;
     event.preventDefault();
