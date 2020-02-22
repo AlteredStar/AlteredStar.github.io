@@ -54,11 +54,11 @@ function disableButton() {
 }
 
 $("button").click(function() {
-   var $questions = $(".aQuestion");
+   var $questions = $(".quest");
     if($questions.find("input:radio:checked").length === $questions.length) {
-        alert("checked");
+        register();
     }
     else {
-        alert("Not Checked");
+        alert("You forgot to answer a question!");
     }
 });
