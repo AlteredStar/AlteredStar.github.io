@@ -64,7 +64,7 @@ function register() {
             ans = 0;
         }
         if (ans > 1) {
-            document.getElementById("result").innerHTML = output;
+            document.getElementById("result").innerHTML = output + ans;
             disableButton();
         }
         
