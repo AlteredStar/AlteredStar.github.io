@@ -48,5 +48,5 @@ function displayRadioValue() {
             + "int: " + int + "\r"
             + "wis: " + wis + "\r"
             + "cha: " + cha + "\r";
-        document.getElementById("result").innerHTML = output;
+        document.getElementById("result").innerHTML += output;
 }
