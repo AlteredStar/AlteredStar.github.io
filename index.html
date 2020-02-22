@@ -39,6 +39,7 @@
       <div class="base">
           
           <form>
+          <div class="quest" id="q1">
           <h2> Question 1 </h2>
           <p> You walk upon a fork in the road. </p>
           <input type="radio" id="forest" 
@@ -53,8 +54,9 @@
                  name="q1" value="home">
           <label for="home"> Turn away and return home. </label> 
           <BR><BR><BR><BR>
-            
-            
+          </div>
+          
+          <div class="quest" id="q2">
           <h2> Question 2 </h2>
           <p> You find a wallet on the floor with $1000 in it. </p>
           <input type="radio" id="police" 
@@ -69,10 +71,13 @@
                  name="q2" value="take">
           <label for="take"> Pocket the money and put the wallet back. </label> 
           <BR><BR><BR><BR>
+          </div>
           
+          
+            
           <input type="button" id="button" onclick="register()" value="Submit">
-            <p id="result"></p>
-       
+          <p id="result"></p>
+          
           </form>
       </div>
   
