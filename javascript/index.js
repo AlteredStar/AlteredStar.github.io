@@ -49,5 +49,5 @@ function register() {
 }
 
 disableButton() {
-    document.getElementById("button").disabled = 'true';
+    document.getElementById("button").disabled = 'false';
 }
