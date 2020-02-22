@@ -52,17 +52,3 @@ function register() {
 function disableButton() {
     document.getElementById("button").disabled = 'true';   
 }
-
-$(":radio").change(function() {
-    var names = {};
-    $(':radio').each(function() {
-        names[$(this).attr('name')] = true;
-    });
-    var count = 0;
-    $.each(names, function() { 
-        count++;
-    });
-    if ($(':radio:checked').length === count) {
-        alert("all answered");
-    }
-}).change();
