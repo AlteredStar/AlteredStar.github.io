@@ -14,7 +14,7 @@ form.addEventListener("submit", function(event) {
     for (const entry of data) {
         if (entry[1] == "mansion")
             str = str + 5;
-        output = output + "str: " + str + "\r" + "dex: " + dex + "\r";   
+        output = output + entry[1] + "str: " + str + "\r" + "dex: " + dex + "\r";   
     };
     log.innerText = output;
     event.preventDefault();
