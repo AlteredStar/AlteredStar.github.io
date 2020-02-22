@@ -47,7 +47,3 @@ function register() {
             + "Charisma: " + cha + "<br>";
         document.getElementById("result").innerHTML = output;
 }
-
-disableButton() {
-    document.getElementById("button").disabled = 'false';
-}
