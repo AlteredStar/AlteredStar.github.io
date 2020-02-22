@@ -53,10 +53,6 @@ function register() {
             + "Intelligence: " + int + "<br>"
             + "Wisdom: " + wis + "<br>"
             + "Charisma: " + cha + "<br>";
-        if (ans > 1) {
-            document.getElementById("result").innerHTML = output;
-            disableButton();
-        }
         if (ans < 2) {
             alert("You did not answer all the questions :(");
             str = 10;
@@ -67,6 +63,11 @@ function register() {
             cha = 10;
             ans = 0;
         }
+        if (ans > 1) {
+            document.getElementById("result").innerHTML = output;
+            disableButton();
+        }
+        
 }
 
 function disableButton() {
