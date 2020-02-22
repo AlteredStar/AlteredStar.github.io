@@ -32,7 +32,6 @@
   <br>
       <div class="base">
         
-        <form>
           
           <h2> Question 1 </h2>
           <p> 
@@ -77,14 +76,12 @@
           </div>
           
           <div>
-          <input type="submit" onClick="this.form.submit(); this.disabled=true; this.value='Sending…';"
-                 value="Submit">
+          <button type="button" onclick="displayRadioValue()">
+            Submit
+          </button>
           <BR><BR><BR>
-          </div>
-            
-        </form>
-        <pre id="log"> 
-        </pre>
+          </div>  
+          <div id="result"></div>
           
       </div>
   
