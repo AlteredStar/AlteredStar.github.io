@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   
-  <head>
-    <script async src="./javascript/index.js"></script>
-    <style>
+<head>
+<script async src="./javascript/index.js"></script>
+<style>
     body {
       background-color: #222222;
       font-family: Arial;
@@ -17,25 +17,60 @@
       padding-top: 200px;
       padding-bottom: 200px;
     }
-    </style>
-    <font color="#F0FFFF">
-    <title>My webpage!</title>
-    </font>
-  </head>
+</style>
+    
+<font color="#F0FFFF">
+<title>My webpage!</title>
+</font>
+</head>
   
-  <body>
-    <font color="#F0FFFF">
+<body>
+<font color="#F0FFFF">
       
-    <h1 style="text-align:center"> Welcome to Character Creation!</h1>
-    <button type="button" onclick="addResponse()"> Start Creation! </button>
+  <h1 style="text-align:center"> Welcome to Character Creation!</h1>
+  <button type="button" onclick="addResponse()"> Start Creation! </button>
     <p id="Q1" style="display:none"> Okay lets begin! </p>
     <br>
-    <div class="base">
-      <h2 style="text-align:center"> Question </h2>
-      <p style="text-align:center"> This is a question </p>
-    </div>
-      
-    </font>
-  </body>
+      <div class="base">
+        <h2 style="text-align:center"> Question </h2>
+        <p style="text-align:center"> This is a question </p>
+      </div>
+    </p>  
+  
+  <form method="post" action="mailto:raizen@mail.utexas.edu?subject=Vocabulary Quiz 1" enctype="text/plain">
+
+Check the answer to each multiple-coice question, and click on the "Send Form" button to submit the information.
+
+<P>1. The word which means "house" is:<BR>
+<input type="radio" name="1.The word which means house is" value="maison">maison<BR>
+<input type="radio" name="1.The word which means house is" value="quatre">quatre<BR>
+<input type="radio" name="1.The word which means house is" value="soleil">soleil<BR>
+<input type="radio" name="1.The word which means house is" value="poisson">poisson<BR>
+</p>
+
+<P>2. The word which means "fish" is:<BR>
+<input type="radio" name="2. The word which means fish is" value="maison">maison<BR>
+<input type="radio" name="2. The word which means fish is" value="valise">valise<BR>
+<input type="radio" name="2. The word which means fish is" value="soleil">soleil<BR>
+<input type="radio" name="2. The word which means fish is" value="poisson">poisson<BR>
+</p>
+
+<P>3. The word which means "suitcase" is:<BR>
+<input type="radio" name="3. The word which means suitcase is" value="renard">renard<BR>
+<input type="radio" name="3. The word which means suitcase is" value="valise">valise<BR>
+<input type="radio" name="3. The word which means suitcase is" value="soleil">soleil<BR>
+<input type="radio" name="3. The word which means suitcase is" value="poisson">poisson<BR>
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<input type="submit" value="Send Form">
+<input type="reset" value="Clear Form">
+</form>
+  
+</font>
+</body>
   
 </html>
