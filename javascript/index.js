@@ -2,9 +2,11 @@ var form = document.querySelector("form");
 var log = document.querySelector("#log");
 
 function register() {
+    var hp = 100;
+    var mp = 100;
     var str = 10;
+    var vit = 10;
     var dex = 10;
-    var con = 10;
     var int = 10;
     var wis = 10;
     var cha = 10;
@@ -14,41 +16,40 @@ function register() {
     for (var i = 0; i < store.length; i++) {
         if (store[i].checked) {
                 if (store[i].value == "forest") {
-                    str += 2;
-                    con += 3;
+                    
                     ans += 1;
                 }
                 if (store[i].value == "mansion") {
-                    cha += 5;
+                    
                     ans += 1;
                 }
                 if (store[i].value == "home") {
-                    wis += 7;
-                    cha -= 2;
+                    
                     ans += 1;
                 }
                 
+            
                 if (store[i].value == "police") {
-                    cha += 7;
+                    
                     ans += 1;
                 }
                 if (store[i].value == "leave") {
-                    wis += 5;
-                    cha -= 1;
+                    
                     ans += 1;
                 }
                 if (store[i].value == "take") {
-                    dex += 3;
-                    int += 3;
+                    
                     ans += 1;
                 }  
             
         }
     }
         output = output 
+            + "Health Points: " + hp + "br"
+            + "Mana Points: " + mp + "br"
             + "Strength: " + str + "<br>" 
-            + "Dexterity: " + dex + "<br>" 
-            + "Constitution: " + con + "<br>"
+            + "Vitality: " + vit + "<br>" 
+            + "Dexterity: " + dex + "<br>"
             + "Intelligence: " + int + "<br>"
             + "Wisdom: " + wis + "<br>"
             + "Charisma: " + cha + "<br>";
