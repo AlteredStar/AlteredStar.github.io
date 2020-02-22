@@ -23,6 +23,18 @@ form.addEventListener("submit", function(event) {
             wis += 7;
             cha -= 2;
         }
+        
+        if (entry[2] == "police") {
+            cha += 7;
+        }
+        if (entry[2] == "leave") {
+            wis += 5;
+            cha -= 1;
+        }
+        if (entry[2] == "take") {
+            dex += 3;
+            int += 3;
+        }
         output = output 
             + "str: " + str + "\r" 
             + "dex: " + dex + "\r" 
