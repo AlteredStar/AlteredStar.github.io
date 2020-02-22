@@ -12,26 +12,26 @@ function displayRadioValue() {
     var q1 = document.getElementsByName('q1');
     var q2 = document.getElementsByName('q2');
     var output = "";
-        if (q1[1] == "mansion") {
+        if (q1[1].value == "mansion") {
             cha += 5;
         }
-        if (q1[1] == "forest") {
+        if (q1[1].value == "forest") {
             str += 2;
             con += 3;
         }
-        if (q1[1] == "home") {
+        if (q1[1].value == "home") {
             wis += 7;
             cha -= 2;
         }
         
-        if (q2[1] == "police") {
+        if (q2[1].value == "police") {
             cha += 7;
         }
-        if (q2[1] == "leave") {
+        if (q2[1].value == "leave") {
             wis += 5;
             cha -= 1;
         }
-        if (q2[1] == "take") {
+        if (q2[1].value == "take") {
             dex += 3;
             int += 3;
         }
