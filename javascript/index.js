@@ -11,7 +11,8 @@ var cha = 10;
 function register() {
     var store = document.forms[0];
     var output = "";
-    for (var i = 0; i < store.length; i++) {
+    var i;
+    for (i = 0; i < store.length; i++) {
             if (store[i].checked) {
                 if (store[i].value == "forest") {
                     str += 2;
@@ -45,8 +46,10 @@ function register() {
             + "Intelligence: " + int + "<br>"
             + "Wisdom: " + wis + "<br>"
             + "Charisma: " + cha + "<br>";
-        document.getElementById("result").innerHTML = output;
-        disableButton();
+        if (i > 1) {
+            document.getElementById("result").innerHTML = output;
+            disableButton();
+        }
 }
 
 function disableButton() {
