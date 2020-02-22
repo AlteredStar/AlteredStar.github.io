@@ -50,7 +50,7 @@ function register() {
             + "Intelligence: " + int + "<br>"
             + "Wisdom: " + wis + "<br>"
             + "Charisma: " + cha + "<br>";
-        if (i > 1) {
+        if (i == store.length-1) {
             document.getElementById("result").innerHTML = output;
             disableButton();
         }
