@@ -16,31 +16,31 @@ function register() {
                 if (store[i].value == "forest") {
                     str += 2;
                     con += 3;
-                    ans++;
+                    ans += 1;
                 }
                 if (store[i].value == "mansion") {
                     cha += 5;
-                    ans++;
+                    ans += 1;
                 }
                 if (store[i].value == "home") {
                     wis += 7;
                     cha -= 2;
-                    ans++;
+                    ans += 1;
                 }
                 
                 if (store[i].value == "police") {
                     cha += 7;
-                    ans++;
+                    ans += 1;
                 }
                 if (store[i].value == "leave") {
                     wis += 5;
                     cha -= 1;
-                    ans++;
+                    ans += 1;
                 }
                 if (store[i].value == "take") {
                     dex += 3;
                     int += 3;
-                    ans++;
+                    ans += 1;
                 }  
             
         }
