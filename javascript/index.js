@@ -54,7 +54,7 @@ function register() {
             + "Wisdom: " + wis + "<br>"
             + "Charisma: " + cha + "<br>"
             + "Answers: " + ans;
-        if (ans < 2) {
+        if (!(ans == 2)) {
             document.getElementById("result").innterHTML = "you did not answer all the questions :(";
             str = 10;
             dex = 10;
