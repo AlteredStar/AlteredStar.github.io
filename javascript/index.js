@@ -11,34 +11,40 @@ var cha = 10;
 function register() {
     var store = document.forms[0];
     var output = "";
-    var i;
-    for (i = 0; i < store.length; i++) {
+    var ans = 0;
+    for (var i = 0; i < store.length; i++) {
         if (store[i].checked) {
             if (i==1) {
                 if (store[i].value == "forest") {
                     str += 2;
                     con += 3;
+                    ans++;
                 }
                 if (store[i].value == "mansion") {
                     cha += 5;
+                    ans++;
                 }
                 if (store[i].value == "home") {
                     wis += 7;
                     cha -= 2;
+                    ans++;
                 }
             }
             
             if (i==2) {
                 if (store[i].value == "police") {
                     cha += 7;
+                    ans++;
                 }
                 if (store[i].value == "leave") {
                     wis += 5;
                     cha -= 1;
+                    ans++;
                 }
                 if (store[i].value == "take") {
                     dex += 3;
                     int += 3;
+                    ans++;
                 }  
             }
         }
@@ -50,7 +56,7 @@ function register() {
             + "Intelligence: " + int + "<br>"
             + "Wisdom: " + wis + "<br>"
             + "Charisma: " + cha + "<br>";
-        if (i == store.length-1) {
+        if (ans == 2) {
             document.getElementById("result").innerHTML = output;
             disableButton();
         }
