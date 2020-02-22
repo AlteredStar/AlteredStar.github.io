@@ -52,3 +52,13 @@ function register() {
 function disableButton() {
     document.getElementById("button").disabled = 'true';   
 }
+
+$("button").click(function() {
+   var $questions = $(".aQuestion");
+    if($questions.find("input:radio:checked").length === $questions.length) {
+        alert("checked");
+    }
+    else {
+        alert("Not Checked");
+    }
+});
