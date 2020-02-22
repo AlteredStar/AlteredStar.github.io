@@ -45,5 +45,5 @@ function register() {
             + "Intelligence: " + int + "\n"
             + "Wisdom: " + wis + "\n"
             + "Charisma: " + cha + "\n";
-        document.getElementById("result").value = output;
+        document.getElementById("result").innerHTML = output;
 }
