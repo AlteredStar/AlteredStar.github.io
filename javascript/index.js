@@ -9,32 +9,38 @@ var wis = 0;
 var cha = 0;
 
 function displayRadioValue() {
-    var q1 = document.getElementsByName('q1');
-    var q2 = document.getElementsByName('q2');
+    document.getElementById("result").innerHTML = "";
+    var ele = document.getElementsByTagName('input');
     var output = "";
-        if (q1[0].value == "mansion") {
-            cha += 5;
-        }
-        if (q1[0].value == "forest") {
-            str += 2;
-            con += 3;
-        }
-        if (q1[0].value == "home") {
-            wis += 7;
-            cha -= 2;
-        }
+    for (int i = 0; i < ele.length; i++) {
+        if (ele[i].type="radio") {
+            if (ele[i].checked) {
+                if (ele[i].value == "mansion") {
+                    cha += 5;
+                }
+                if (ele[i].value == "forest") {
+                    str += 2;
+                    con += 3;
+                }
+                if (ele[i].value == "home") {
+                    wis += 7;
+                    cha -= 2;
+                }
         
-        if (q2[0].value == "police") {
-            cha += 7;
+                if (ele[i].value == "police") {
+                    cha += 7;
+                }
+                if (ele[i].value == "leave") {
+                    wis += 5;
+                    cha -= 1;
+                }
+                if (ele[i].value == "take") {
+                    dex += 3;
+                    int += 3;
+                }   
+            }
         }
-        if (q2[0].value == "leave") {
-            wis += 5;
-            cha -= 1;
-        }
-        if (q2[0].value == "take") {
-            dex += 3;
-            int += 3;
-        }
+    }
         output = output 
             + "str: " + str + "\r" 
             + "dex: " + dex + "\r" 
