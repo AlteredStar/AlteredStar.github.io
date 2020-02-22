@@ -12,12 +12,17 @@ form.addEventListener("submit", function(event) {
     var data = new FormData(form);
     var output = "";
     for (const entry of data) {
-        if (entry[1] == "mansion")
+        if (entry[1] == "mansion") {
             cha += 5;
-        if (entry[1] == "forest")
-            str += 5;
-        if (entry[1] == "home")
-            int += 5;
+        }
+        if (entry[1] == "forest") {
+            str += 2;
+            con += 3;
+        }
+        if (entry[1] == "home") {
+            wis += 7;
+            cha -= 2;
+        }
         output = output 
             + "str: " + str + "\r" 
             + "dex: " + dex + "\r" 
