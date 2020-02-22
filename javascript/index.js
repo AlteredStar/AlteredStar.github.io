@@ -62,14 +62,3 @@ function register() {
 function disableButton() {
     document.getElementById("button").disabled = 'true';   
 }
-
-$("button").click(function() {
-    alert("activated");
-    var $questions = $(".quest");
-    if($questions.find("input:radio:checked").length === $questions.length) {
-        register();
-    }
-    else {
-        alert("You forgot to answer a question!");
-    }
-});
