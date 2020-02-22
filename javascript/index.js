@@ -57,7 +57,7 @@ function register() {
             document.getElementById("result").innerHTML = output;
             disableButton();
         }
-        else {
+        if (ans < 2) {
             alert("You did not answer all the questions :(");
             str = 10;
             dex = 10;
@@ -65,6 +65,7 @@ function register() {
             int = 10;
             wis = 10;
             cha = 10;
+            ans = 0;
         }
 }
 
