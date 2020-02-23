@@ -229,59 +229,91 @@ function register() {
             
                 //Question 7: Kobold Skirmish
                 if (store[i].value == "girl") {
-                 
+                    cha += 6;
+                    str += 4;
+                    dex += 4;
+                    mp -= 40;
                     ans += 1;    
                 }
                 if (store[i].value == "boy") {
-                 
+                    cha += 6;
+                    int += 4;
+                    wis += 4;
+                    hp -= 40;
+                    ans += 1;
+                }
+                if (store[i].value == "report") {
+                    dex += 6;
+                    wis += 6;
+                    hp += 100;
+                    vit -= 4;
+                    spr -= 4;
+                    cha -= 4;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
-                    ans += 1;    
-                }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "watch") {
+                    wis += 6;
+                    vit += 4
+                    hp += 4;
+                    cha -= 2;
+                    spr -= 2;
                     ans += 1;    
                 } 
                 
-                //Question 8: 
-                /*
-                if (store[i].value == "") {
+                //Question 8: Archives
+                if (store[i].value == "sword") {
+                    str += 4;
+                    cha += 4;
+                    hp += 20;
+                    ans += 1;    
+                }
+                if (store[i].value == "sage") {
+                    int += 4;
+                    wis += 4;
+                    mp += 20;
+                    ans += 1;    
+                }
+                if (store[i].value == "tamer") {
+                    mp += 40;
+                    
+                    ans += 1;    
+                }
+                if (store[i].value == "faith") {
+                    spr += 6;
+                    cha += 2;
+                    mp += 20;
+                    ans += 1;    
+                }
+                if (store[i].value == "adventurer") {
                  
                     ans += 1;    
                 }
-                if (store[i].value == "") {
+                if (store[i].value == "botanist") {
                  
                     ans += 1;    
                 }
-                if (store[i].value == "") {
+                if (store[i].value == "arch") {
                  
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
-                    ans += 1;    
-                } */
             
-                //Question 9: 
-                /*
-                if (store[i].value == "") {
+                //Question 9: Murder Mystery 
+                if (store[i].value == "butler") {
+                    
+                    ans += 1;    
+                }
+                if (store[i].value == "maid") {
                  
                     ans += 1;    
                 }
-                if (store[i].value == "") {
+                if (store[i].value == "wife") {
                  
                     ans += 1;    
                 }
-                if (store[i].value == "") {
+                if (store[i].value == "daughter") {
                  
                     ans += 1;    
-                }
-                if (store[i].value == "") {
-                 
-                    ans += 1;    
-                } */
+                } 
             
                 //Question 10: 
                 /*
