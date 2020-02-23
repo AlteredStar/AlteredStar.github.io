@@ -162,7 +162,7 @@ function register() {
     if (!(ans == 3)) {
         document.getElementById("result").innerHTML = "you did not answer all the questions :(";
     }
-    if (ans == 1) {
+    if (ans == 3) {
         document.getElementById("result").innerHTML = output;
         disableButton();
     }
