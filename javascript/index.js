@@ -128,24 +128,38 @@ function register() {
                     ans += 1;    
                 }
             
-                //Question 4: 
-                /*
-                if (store[i].value == "") {
-                 
+                //Question 4: Artifact
+                if (store[i].value == "glove") {
+                    int += 7;
+                    mp += 30;
+                    dex += 5;
+                    spr += 3;
+                    str -= 4;
+                    vit -= 4;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "goblet") {
+                    hp += 60;
+                    str += 5;
+                    vit += 5;
+                    wis -= 3;
+                    cha -= 3;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "mantle") {
+                    dex += 9;
+                    spr += 7;
+                    hp -= 20;
+                    vit -= 4;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "unlock") {
+                    dex += 7;
+                    int += 4;
+                    hp += 40;
+                    spr -= 5;
                     ans += 1;    
-                } */
+                } 
             
                 //Question 4: 
                 /*
