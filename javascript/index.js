@@ -9,8 +9,20 @@ function register() {
     var cha = 10;
     var spr = 10;
     var ans = 0;
+    
+    var strHP = "Health Points: ";
+    var strMP = "Mana Points: ";
+    var strStr = "Strength: ";
+    var strVit = "Vitality: ";
+    var strDex = "Dexterity: ";
+    var strInt = "Intelligence: ";
+    var strWis = "Wisdom: ";
+    var strSpr = "Spirit: ";
+    var strCha = "Charisma: ";
+    
     var store = document.forms[0];
     var output = "";
+    
     for (var i = 0; i < store.length; i++) {
         if (store[i].checked) {
                 if (store[i].value == "forest") {
@@ -43,15 +55,7 @@ function register() {
         }
     }
     //"#cd0000 Health Points: "
-        var strHP = "Health Points: ";
-        var strMP = "Mana Points: ";
-        var strStr = "Strength: ";
-        var strVit = "Vitality: ";
-        var strDex = "Dexterity: ";
-        var strInt = "Intelligence: ";
-        var strWis = "Wisdom: ";
-        var strSpr = "Spirit: ";
-        var strCha = "Charisma: ";
+        
         output = output 
             + strHP.fontcolor("#cd0000") + hp + "<br>"
             + strMP.fontcolor("#0000cd") + mp + "<br>"
