@@ -1,4 +1,15 @@
-var hp = 100;
+var strHP = "Health Points: ";
+var strMP = "Mana Points: ";
+var strStr = "Strength: ";
+var strVit = "Vitality: ";
+var strDex = "Dexterity: ";
+var strInt = "Intelligence: ";
+var strWis = "Wisdom: ";
+var strSpr = "Spirit: ";
+var strCha = "Charisma: ";
+
+function register() {
+    var hp = 100;
     var mp = 100;
     var str = 10;
     var vit = 10;
@@ -8,18 +19,6 @@ var hp = 100;
     var cha = 10;
     var spr = 10;
     var ans = 0;
-    
-    var strHP = "Health Points: ";
-    var strMP = "Mana Points: ";
-    var strStr = "Strength: ";
-    var strVit = "Vitality: ";
-    var strDex = "Dexterity: ";
-    var strInt = "Intelligence: ";
-    var strWis = "Wisdom: ";
-    var strSpr = "Spirit: ";
-    var strCha = "Charisma: ";
-
-function register() {
     
     
     var store = document.forms[0];
@@ -95,7 +94,7 @@ function register() {
                     ans += 1;    
                 }
                 
-                //Question 3:
+                //Question 3: Isekai
                 if (store[i].value == "help") {
                     spr += 4;
                     str += 4;
@@ -130,6 +129,139 @@ function register() {
                 }
             
                 //Question 4: 
+                /*
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } */
+            
+                //Question 4: 
+                /*
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } */
+            
+                //Question 5: 
+                /*
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } */
+            
+                //Question 6: 
+                /*
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } */
+                
+                //Question 7: 
+                /*
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } */
+            
+                //Question 8: 
+                /*
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } */
+            
+                //Question 9: 
+                /*
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } */
+            
+                //Question 10: 
                 /*
                 if (store[i].value == "") {
                  
