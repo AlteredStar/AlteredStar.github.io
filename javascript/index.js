@@ -336,7 +336,7 @@ function register() {
         + strCha.fontcolor("#ffc0cb") + cha + "<br>";
     
     if (ans < 6) {
-        document.getElementById("result").innerHTML = "you did not answer all the questions :(";
+        document.getElementById("result").innerHTML = "you only answered " + ans + " questions, please answer all the questions :(";
     }
     if (ans > 5) {
         document.getElementById("result").innerHTML = output;
