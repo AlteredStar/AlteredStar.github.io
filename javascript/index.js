@@ -45,7 +45,7 @@ function register() {
     //"#cd0000 Health Points: "
         var str = "Health Points: ";
         output = output 
-            + str.fontcolor("red") + hp + "<br>"
+            + str.fontcolor("#cd0000") + hp + "<br>"
             + "#0000cd Mana Points: " + mp + "<br>"
             + "#8b0000 Strength: " + str + "<br>" 
             + "#00cd66 Vitality: " + vit + "<br>" 
@@ -63,14 +63,6 @@ function register() {
             disableButton();
         }
         
-}
-
-function printColor(thecolor, thetext)
-{
-    var $span = $("<span>");
-    $span.css({color:thecolor});
-    $span.text(thetext);
-    return $span;
 }
 
 function disableButton() {
