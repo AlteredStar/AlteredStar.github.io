@@ -43,8 +43,9 @@ function register() {
         }
     }
     //"#cd0000 Health Points: "
+        var str = "Health Points: ";
         output = output 
-            + "#cd0000 Health Points: " + hp + "<br>"
+            + str.fontcolor("red") + hp + "<br>"
             + "#0000cd Mana Points: " + mp + "<br>"
             + "#8b0000 Strength: " + str + "<br>" 
             + "#00cd66 Vitality: " + vit + "<br>" 
