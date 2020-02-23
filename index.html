@@ -102,40 +102,110 @@
           <form>
           <div id="q1">
           <h2> Question 1 </h2>
-          <p> You walk upon a fork in the road. </p>
+          <p> 
+          You are walking along a path in order to find essentials for the upcoming harsh winter season and as the sun begins, you come across a fork in the road. 
+          The left path leads deeper into the forest where the existence of wolves is certain, but you will reach a wealthy city within 3.5 hours.
+          The right path leads to a clearing where a dim mansion can be seen in the distance, you estimate the distance to be about 2.5 hour away.
+          Behind you is a straight path leading back home, and you may rest at a town 1.5 hours away along the path.
+          Next to the crossroad is a small clearing fit for setting up camp.
+          Which path do you take?
+          </p>
           <input type="radio" id="forest" 
                  name="q1" value="forest">
-          <label for="forest"> Take the left path leading to a forest. </label> 
+          <label for="forest"> Take the left path through the forest to the city. </label> 
           <BR><BR>
           <input type="radio" id="mansion" 
                  name="q1" value="mansion">
-          <label for="mansion"> Take the right path leading to a mansion. </label> 
+          <label for="mansion"> Take the right path leading to the mansion. </label> 
           <BR><BR>
           <input type="radio" id="home"
                  name="q1" value="home">
-          <label for="home"> Turn away and return home. </label> 
+          <label for="home"> Turn around and return home. </label>
+          <BR><BR>
+          <input type="radio" id="camp" 
+                 name="q1" value="camp">
+          <label for="camp"> Set up camp next to the crossroad. </label>
           <BR><BR><BR><BR>
           </div>
           
           <div id="q2">
           <h2> Question 2 </h2>
-          <p> You find a wallet on the floor with $1000 in it. </p>
-          <input type="radio" id="police" 
-                 name="q2" value="police">
-          <label for="police"> Give the wallet to the police. </label> 
+          <p> 
+          During a trip to the market, you find a pouch on the ground containing a handful of gold coins. 
+          You may give the pouch to the nearby guards who have a reputation for being fair to the citizens of your town.
+          You may leave the pouch where it lies.
+          You may take the gold for yourself.
+          You may give the pouch to the local orphanage where you have aquainted yourself with its director.
+          </p>
+          <input type="radio" id="guards" 
+                 name="q2" value="guards">
+          <label for="guards"> Give the pouch to the guards. </label> 
           <BR><BR>
           <input type="radio" id="leave" 
                  name="q2" value="leave">
-          <label for="leave"> Leave the wallet where it is and leave. </label> 
+          <label for="leave"> Leave the pouch where it is. </label> 
           <BR><BR>
-          <input type="radio" id="take"
-                 name="q2" value="take">
-          <label for="take"> Pocket the money and put the wallet back. </label> 
+          <input type="radio" id="gold"
+                 name="q2" value="gold">
+          <label for="gold"> Pocket the gold. </label>
+          <BR><BR>
+          <input type="radio" id="orphanage"
+                 name="q2" value="orphanage">
+          <label for="orphanage"> Donate the gold to the local orphanage. </label>
           <BR><BR><BR><BR>
           </div>
           
+          <div id="q3">
+          <h2> Question 3 </h2>
+          <p> 
+          You have been transported into a fantasy world. You open your eyes in the King's audience chamber. The Kingdom desperately pleas for your help to defeat the Demon Lord.
+          You may wholeheartedly agree to help the poor Kingdom, and your journey to defeat the Evil Demon Lord will begin.
+          You may agree to their request and decide your true alligance later, and regardless of whether or not you fight for yourself, the Kingdom, or against the Kingdom, your journey to defeat the Demon Lord will begin.
+          You may decieve the Kingdom and runaway during the night after gathering information in the Palace, but you will become a wanted criminal in the Kingdom.
+          You may attempt to cajole the Princess in hopes of strengthening your actual influence in the Kingdom; however, success is not guaranteed, and you must stay allied with the Kingdom at least until your efforts have yielded a positive gain.
+          </p>
+          <input type="radio" id="help" 
+                 name="q3" value="help">
+          <label for="help"> Wholeheartedly help the Kingdom. </label> 
+          <BR><BR>
+          <input type="radio" id="decieve" 
+                 name="q3" value="decieve">
+          <label for="decieve"> Decieve the Kingdom. </label> 
+          <BR><BR>
+          <input type="radio" id="escape" 
+                 name="q3" value="escape">
+          <label for="escape"> Runaway from the Kingdom as a criminal. </label>
+          <BR><BR>
+          <input type="radio" id="charm"
+                 name="q3" value="charm">
+          <label for="charm"> Make an attempt to charm the Princess. </label> 
+          <BR><BR><BR><BR>
+          </div>
           
-            
+            <!--
+          <div id="q4">
+          <h2> Question 4 </h2>
+          <p> 
+          
+          </p>
+          <input type="radio" id="" 
+                 name="q4" value="">
+          <label for="">  </label> 
+          <BR><BR>
+          <input type="radio" id="" 
+                 name="q4" value="">
+          <label for="">  </label>
+          <BR><BR>
+          <input type="radio" id="" 
+                 name="q4" value="">
+          <label for="">  </label>
+          <BR><BR>
+          <input type="radio" id=""
+                 name="q4" value="">
+          <label for="">  </label> 
+          <BR><BR><BR><BR>
+          </div>
+            -->
           <input type="button" id="button" onclick="register()" value="Submit">
           <p id="result"></p>
           
