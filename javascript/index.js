@@ -57,7 +57,7 @@ function register() {
     //"#cd0000 Health Points: "
         
         output = output 
-            + strHP.fontcolor("#cd0000") + hp + "<br>"
+            + strHP.fontcolor("#DC143C") + hp + "<br>"
             + strMP.fontcolor("#0000cd") + mp + "<br>"
             + strStr.fontcolor("#8b0000") + str + "<br>" 
             + strVit.fontcolor("#00cd66") + vit + "<br>" 
