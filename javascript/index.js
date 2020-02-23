@@ -147,27 +147,25 @@ function register() {
                 } */
             
         }
-    }
-    //"#cd0000 Health Points: "
-        
-        output = output 
-            + strHP.fontcolor("#DC143C") + hp + "<br>"
-            + strMP.fontcolor("#0000cd") + mp + "<br>"
-            + strStr.fontcolor("#8b0000") + str + "<br>" 
-            + strVit.fontcolor("#00cd66") + vit + "<br>" 
-            + strDex.fontcolor("#ffff00") + dex + "<br>"
-            + strInt.fontcolor("#b0e0e6") + int + "<br>"
-            + strWis.fontcolor("#dda0dd") + wis + "<br>"
-            + strSpr.fontcolor("#e6e6fa") + spr + "<br>"
-            + strCha.fontcolor("#ffc0cb") + cha + "<br>";
+    }        
+    output = output 
+        + strHP.fontcolor("#DC143C") + hp + "<br>"
+        + strMP.fontcolor("#0000cd") + mp + "<br>"
+        + strStr.fontcolor("#8b0000") + str + "<br>" 
+        + strVit.fontcolor("#00cd66") + vit + "<br>" 
+        + strDex.fontcolor("#ffff00") + dex + "<br>"
+        + strInt.fontcolor("#b0e0e6") + int + "<br>"
+        + strWis.fontcolor("#dda0dd") + wis + "<br>"
+        + strSpr.fontcolor("#e6e6fa") + spr + "<br>"
+        + strCha.fontcolor("#ffc0cb") + cha + "<br>";
     
-        if (!(ans == 2)) {
-            document.getElementById("result").innerHTML = "you did not answer all the questions :(";
-        }
-        if (ans > 1) {
-            document.getElementById("result").innerHTML = output;
-            disableButton();
-        }
+    if (!(ans == 3)) {
+        document.getElementById("result").innerHTML = "you did not answer all the questions :(";
+    }
+    if (ans == 1) {
+        document.getElementById("result").innerHTML = output;
+        disableButton();
+    }
         
 }
 
