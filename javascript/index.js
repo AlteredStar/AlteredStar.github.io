@@ -335,10 +335,10 @@ function register() {
         + strSpr.fontcolor("#e6e6fa") + spr + "<br>"
         + strCha.fontcolor("#ffc0cb") + cha + "<br>";
     
-    if (!(ans == 6)) {
+    if (ans < 6) {
         document.getElementById("result").innerHTML = "you did not answer all the questions :(";
     }
-    if (ans == 6) {
+    if (ans > 5) {
         document.getElementById("result").innerHTML = output;
         disableButton();
     }
