@@ -43,15 +43,15 @@ function register() {
         }
     }
         output = output 
-            + "<font color="#cd0000">Health Points: </font>" + hp + "<br>"
-            + "<font color="#0000cd">Mana Points: </font>" + mp + "<br>"
-            + "<font color="#8b0000">Strength: </font>" + str + "<br>" 
-            + "<font color="#00cd66">Vitality: </font>" + vit + "<br>" 
-            + "<font color="#ffff00">Dexterity: </font>" + dex + "<br>"
-            + "<font color="#b0e0e6">Intelligence: </font>" + int + "<br>"
-            + "<font color="#dda0dd">Wisdom: </font>" + wis + "<br>"
-            + "<font color="#e6e6fa">Spirit: </font>" + spr + "<br>"
-            + "<font color="#ffc0cb">Charisma: </font>" + cha + "<br>";
+            + "<font color=""#cd0000"">Health Points: </font>" + hp + "<br>"
+            + "<font color=""#0000cd"">Mana Points: </font>" + mp + "<br>"
+            + "<font color=""#8b0000"">Strength: </font>" + str + "<br>" 
+            + "<font color=""#00cd66"">Vitality: </font>" + vit + "<br>" 
+            + "<font color=""#ffff00"">Dexterity: </font>" + dex + "<br>"
+            + "<font color=""#b0e0e6"">Intelligence: </font>" + int + "<br>"
+            + "<font color=""#dda0dd"">Wisdom: </font>" + wis + "<br>"
+            + "<font color=""#e6e6fa"">Spirit: </font>" + spr + "<br>"
+            + "<font color=""#ffc0cb"">Charisma: </font>" + cha + "<br>";
     
         if (!(ans == 2)) {
             document.getElementById("result").innerHTML = "you did not answer all the questions :(";
