@@ -105,7 +105,7 @@ function register() {
                     wis -= 3;
                     ans += 1;    
                 }
-                if (store[i].value == "decieve") {
+                if (store[i].value == "deceive") {
                     wis += 5;
                     int += 5;
                     cha += 2;
