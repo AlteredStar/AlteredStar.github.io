@@ -1,5 +1,4 @@
-function register() {
-    var hp = 100;
+var hp = 100;
     var mp = 100;
     var str = 10;
     var vit = 10;
@@ -19,6 +18,9 @@ function register() {
     var strWis = "Wisdom: ";
     var strSpr = "Spirit: ";
     var strCha = "Charisma: ";
+
+function register() {
+    
     
     var store = document.forms[0];
     var output = "";
