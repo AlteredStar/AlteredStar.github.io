@@ -42,16 +42,17 @@ function register() {
             
         }
     }
+    //"#cd0000 Health Points: "
         output = output 
-            + "<font color=\"#cd0000\">Health Points: </font>" + hp + "<br>"
-            + "<font color=\"#0000cd\">Mana Points: </font>" + mp + "<br>"
-            + "<font color=\"#8b0000\">Strength: </font>" + str + "<br>" 
-            + "<font color=\"#00cd66\">Vitality: </font>" + vit + "<br>" 
-            + "<font color=\"#ffff00\">Dexterity: </font>" + dex + "<br>"
-            + "<font color=\"#b0e0e6\">Intelligence: </font>" + int + "<br>"
-            + "<font color=\"#dda0dd\">Wisdom: </font>" + wis + "<br>"
-            + "<font color=\"#e6e6fa\">Spirit: </font>" + spr + "<br>"
-            + "<font color=\"#ffc0cb\">Charisma: </font>" + cha + "<br>";
+            + printColor('#cd0000', "Health Points: ") + hp + "<br>"
+            + "#0000cd Mana Points: " + mp + "<br>"
+            + "#8b0000 Strength: " + str + "<br>" 
+            + "#00cd66 Vitality: " + vit + "<br>" 
+            + "#ffff00 Dexterity: " + dex + "<br>"
+            + "#b0e0e6 Intelligence: " + int + "<br>"
+            + "#dda0dd Wisdom: " + wis + "<br>"
+            + "#e6e6fa Spirit: " + spr + "<br>"
+            + "#ffc0cb Charisma: " + cha + "<br>";
     
         if (!(ans == 2)) {
             document.getElementById("result").innerHTML = "you did not answer all the questions :(";
@@ -61,6 +62,14 @@ function register() {
             disableButton();
         }
         
+}
+
+function printColor(thecolor, thetext)
+{
+    var $span = $("<span>");
+    $span.css({color:thecolor});
+    $span.text(thetext);
+    return $span;
 }
 
 function disableButton() {
