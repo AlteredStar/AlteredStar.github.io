@@ -161,63 +161,72 @@ function register() {
                     ans += 1;    
                 } 
             
-                //Question 4: 
-                /*
-                if (store[i].value == "") {
-                 
+                //Question 5: Beginner Adventurer 
+                if (store[i].value == "gather") {
+                    wis += 7;
+                    dex += 6;
+                    cha -= 3;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "solo") {
+                    str += 6;
+                    spr += 6;
+                    cha += 2;
+                    hp += 40;
+                    vit -= 4;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "party") {
+                    wis += 4;
+                    cha += 4;
+                    str += 2;
+                    vit += 2;
+                    hp += 20;
+                    mp -= 40;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "escort") {
+                    dex += 5;
+                    cha += 5;
+                    wis += 3;
+                    spr += 3;
+                    vit -= 2;
+                    int -= 2;
+                    mp -= 20;
                     ans += 1;    
-                } */
+                } 
             
-                //Question 5: 
-                /*
-                if (store[i].value == "") {
-                 
+                //Question 6: Bandit Encounter
+                if (store[i].value == "coop") {
+                    wis += 4;
+                    cha += 6;
+                    str += 4;
+                    hp -= 40;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "negotiate") {
+                    cha += 6;
+                    spr += 6;
+                    int += 2;
+                    wis -= 4;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "flee") {
+                    dex += 8;
+                    hp += 50;
+                    wis += 5;
+                    cha -= 4;
+                    spr -= 4;
                     ans += 1;    
                 }
-                if (store[i].value == "") {
-                 
+                if (store[i].value == "ff") {
+                    hp += 150;
+                    vit += 10;
+                    wis -= 5;
+                    cha -= 10;
                     ans += 1;    
-                } */
+                } 
             
-                //Question 6: 
-                /*
-                if (store[i].value == "") {
-                 
-                    ans += 1;    
-                }
-                if (store[i].value == "") {
-                 
-                    ans += 1;    
-                }
-                if (store[i].value == "") {
-                 
-                    ans += 1;    
-                }
-                if (store[i].value == "") {
-                 
-                    ans += 1;    
-                } */
-                
                 //Question 7: 
                 /*
                 if (store[i].value == "") {
@@ -236,7 +245,7 @@ function register() {
                  
                     ans += 1;    
                 } */
-            
+                
                 //Question 8: 
                 /*
                 if (store[i].value == "") {
@@ -276,6 +285,25 @@ function register() {
                 } */
             
                 //Question 10: 
+                /*
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } */
+            
+                //Question 11: 
                 /*
                 if (store[i].value == "") {
                  
