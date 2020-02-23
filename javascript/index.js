@@ -227,9 +227,12 @@ function register() {
                     ans += 1;    
                 } 
             
-                //Question 7: 
-                /*
-                if (store[i].value == "") {
+                //Question 7: Kobold Skirmish
+                if (store[i].value == "girl") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "boy") {
                  
                     ans += 1;    
                 }
@@ -240,11 +243,7 @@ function register() {
                 if (store[i].value == "") {
                  
                     ans += 1;    
-                }
-                if (store[i].value == "") {
-                 
-                    ans += 1;    
-                } */
+                } 
                 
                 //Question 8: 
                 /*
