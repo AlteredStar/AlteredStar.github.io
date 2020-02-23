@@ -1,6 +1,3 @@
-var form = document.querySelector("form");
-var log = document.querySelector("#log");
-
 function register() {
     var hp = 100;
     var mp = 100;
@@ -10,6 +7,7 @@ function register() {
     var int = 10;
     var wis = 10;
     var cha = 10;
+    var spr = 10;
     var ans = 0;
     var store = document.forms[0];
     var output = "";
@@ -45,14 +43,15 @@ function register() {
         }
     }
         output = output 
-            + "Health Points: " + hp + "br"
-            + "Mana Points: " + mp + "br"
-            + "Strength: " + str + "<br>" 
-            + "Vitality: " + vit + "<br>" 
-            + "Dexterity: " + dex + "<br>"
-            + "Intelligence: " + int + "<br>"
-            + "Wisdom: " + wis + "<br>"
-            + "Charisma: " + cha + "<br>";
+            + "<font color="#cd0000">Health Points: </font>" + hp + "<br>"
+            + "<font color="#0000cd">Mana Points: </font>" + mp + "<br>"
+            + "<font color="#8b0000">Strength: </font>" + str + "<br>" 
+            + "<font color="#00cd66">Vitality: </font>" + vit + "<br>" 
+            + "<font color="#ffff00">Dexterity: </font>" + dex + "<br>"
+            + "<font color="#b0e0e6">Intelligence: </font>" + int + "<br>"
+            + "<font color="#dda0dd">Wisdom: </font>" + wis + "<br>"
+            + "<font color="#e6e6fa">Spirit: </font>" + spr + "<br>"
+            + "<font color="#ffc0cb">Charisma: </font>" + cha + "<br>";
     
         if (!(ans == 2)) {
             document.getElementById("result").innerHTML = "you did not answer all the questions :(";
