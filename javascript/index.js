@@ -43,17 +43,25 @@ function register() {
         }
     }
     //"#cd0000 Health Points: "
-        var str = "Health Points: ";
+        var strHP = "Health Points: ";
+        var strMP = "Mana Points: ";
+        var strStr = "Strength: ";
+        var strVit = "Vitality: ";
+        var strDex = "Dexterity: ";
+        var strInt = "Intelligence: ";
+        var strWis = "Wisdom: ";
+        var strSpr = "Spirit: ";
+        var strCha = "Charisma: ";
         output = output 
-            + str.fontcolor("#cd0000") + hp + "<br>"
-            + "#0000cd Mana Points: " + mp + "<br>"
-            + "#8b0000 Strength: " + str + "<br>" 
-            + "#00cd66 Vitality: " + vit + "<br>" 
-            + "#ffff00 Dexterity: " + dex + "<br>"
-            + "#b0e0e6 Intelligence: " + int + "<br>"
-            + "#dda0dd Wisdom: " + wis + "<br>"
-            + "#e6e6fa Spirit: " + spr + "<br>"
-            + "#ffc0cb Charisma: " + cha + "<br>";
+            + strHP.fontcolor("#cd0000") + hp + "<br>"
+            + strMP.fontcolor("#0000cd") + mp + "<br>"
+            + strStr.fontcolor("#8b0000") + str + "<br>" 
+            + strVit.fontcolor("#00cd66") + vit + "<br>" 
+            + strDex.fontcolor("#ffff00") + dex + "<br>"
+            + strInt.fontcolor("#b0e0e6") + int + "<br>"
+            + strWis.fontcolor("#dda0dd") + wis + "<br>"
+            + strSpr.fontcolor("#e6e6fa") + spr + "<br>"
+            + strCha.fontcolor("#ffc0cb") + cha + "<br>";
     
         if (!(ans == 2)) {
             document.getElementById("result").innerHTML = "you did not answer all the questions :(";
