@@ -3,6 +3,7 @@ var strMP = "Mana Points: ";
 var strStr = "Strength: ";
 var strVit = "Vitality: ";
 var strDex = "Dexterity: ";
+var strAgi = "Agility: ";
 var strInt = "Intelligence: ";
 var strWis = "Wisdom: ";
 var strSpr = "Spirit: ";
@@ -14,6 +15,7 @@ function register() {
     var str = 10;
     var vit = 10;
     var dex = 10;
+    var agi = 10;
     var int = 10;
     var wis = 10;
     var cha = 10;
@@ -29,68 +31,67 @@ function register() {
                 //Question 1: Crossroads
                 if (store[i].value == "forest") {
                     str += 5;
-                    spr += 3;
+                    agi += 5;
                     cha += 3;
-                    int -= 1;
+                    int -= 3;
                     ans += 1;
                 }
                 if (store[i].value == "mansion") {
                     int += 7;
-                    dex += 3;
+                    mp += 30;
                     cha += 3;
-                    vit -= 3;
+                    str -= 3;
                     ans += 1;
                 }
                 if (store[i].value == "home") {
-                    spr += 7;
+                    spr += 6;
                     hp += 50;
                     mp += 50;
-                    wis += 1;
+                    agi += 2;
                     cha -= 4;
                     int -= 4;
                     ans += 1;
                 }
                 if (store[i].value == "camp") {
-                    hp += 30
-                    vit += 7;
-                    wis += 2;
-                    dex += 2;
-                    cha -= 2;
-                    int -= 2;
+                    wis += 6;
+                    dex += 6;
+                    vit += 4;
+                    hp -= 20;
+                    agi -= 4;
                     ans +=1;
                 }
                 
                 //Question 2: Pouch of Gold
                 if (store[i].value == "guards") {
-                    spr += 4;
-                    wis += 6;
-                    cha += 5;
-                    str -= 2;
-                    vit -= 2;
-                    dex -= 1;
+                    spr += 6;
+                    cha += 6;
+                    wis += 4;
+                    str -= 4;
+                    hp -= 20;
                     ans += 1;
                 }
                 if (store[i].value == "leave") {
-                    vit += 6;
-                    hp += 30;
+                    agi += 6;
+                    vit += 4;
                     wis += 4;
-                    cha -= 3;
+                    cha -= 2;
+                    spr -= 2;
                     ans += 1;
                 }
                 if (store[i].value == "gold") {
-                    str += 4;
+                    agi += 6;
                     dex += 6;
-                    hp += 30;
-                    vit += 2;
-                    spr -= 5;
+                    hp += 10;
+                    str += 4;
+                    spr -= 7;
                     ans += 1;
                 }
                 if (store[i].value == "orphanage") {
                     spr += 7;
                     vit += 4;
-                    cha += 4;
+                    cha += 5;
                     str -= 3;
-                    dex -= 2;
+                    dex -= 3;
                     ans += 1;    
                 }
                 
@@ -107,18 +108,18 @@ function register() {
                 if (store[i].value == "deceive") {
                     wis += 5;
                     int += 5;
-                    cha += 2;
+                    cha += 4;
                     vit += 2;
+                    dex -= 2;
                     spr -= 4;
                     ans += 1;    
                 }
                 if (store[i].value == "escape") {
-                    hp += 50;
-                    mp += 40;
-                    str += 3;
                     dex += 6;
-                    cha -= 5;
-                    spr -= 3;
+                    agi += 6;
+                    hp += 80;
+                    spr -= 4;
+                    cha -= 6;
                     ans += 1;    
                 }
                 if (store[i].value == "charm") {
@@ -147,24 +148,28 @@ function register() {
                     ans += 1;    
                 }
                 if (store[i].value == "mantle") {
-                    dex += 9;
+                    dex += 7;
+                    agi += 8;
                     spr += 7;
-                    hp -= 20;
+                    hp -= 80;
                     vit -= 4;
                     ans += 1;    
                 }
                 if (store[i].value == "unlock") {
-                    dex += 7;
-                    int += 4;
-                    hp += 40;
-                    spr -= 5;
+                    dex += 9;
+                    int += 7;
+                    agi += 5;
+                    hp -= 30;
+                    vit -= 4;
+                    spr -= 4;
                     ans += 1;    
                 } 
             
                 //Question 5: Beginner Adventurer 
                 if (store[i].value == "gather") {
-                    wis += 7;
-                    dex += 6;
+                    wis += 5;
+                    dex += 5;
+                    agi += 3;
                     cha -= 3;
                     ans += 1;    
                 }
@@ -177,21 +182,22 @@ function register() {
                     ans += 1;    
                 }
                 if (store[i].value == "party") {
-                    wis += 4;
+                    wis += 6;
                     cha += 4;
                     str += 2;
                     vit += 2;
+                    dex -= 2;
                     hp += 20;
                     mp -= 40;
                     ans += 1;    
                 }
                 if (store[i].value == "escort") {
-                    dex += 5;
-                    cha += 5;
-                    wis += 3;
-                    spr += 3;
-                    vit -= 2;
-                    int -= 2;
+                    dex += 3;
+                    cha += 6;
+                    wis += 6;
+                    agi += 3;
+                    vit -= 3;
+                    int -= 3;
                     mp -= 20;
                     ans += 1;    
                 } 
@@ -212,18 +218,21 @@ function register() {
                     ans += 1;    
                 }
                 if (store[i].value == "flee") {
-                    dex += 8;
-                    hp += 50;
-                    wis += 5;
+                    dex += 4;
+                    agi += 9;
+                    hp += 40;
+                    wis += 3;
+                    str -= 2;
                     cha -= 4;
                     spr -= 4;
                     ans += 1;    
                 }
                 if (store[i].value == "ff") {
-                    hp += 150;
+                    hp += 200;
                     vit += 10;
                     wis -= 5;
                     cha -= 10;
+                    str -= 5;
                     ans += 1;    
                 } 
             
@@ -232,20 +241,22 @@ function register() {
                     cha += 6;
                     str += 4;
                     dex += 4;
-                    mp -= 40;
+                    agi += 2;
+                    mp -= 60;
                     ans += 1;    
                 }
                 if (store[i].value == "boy") {
                     cha += 6;
                     int += 4;
                     wis += 4;
-                    hp -= 40;
+                    agi -= 2;
+                    hp -= 60;
                     ans += 1;
                 }
                 if (store[i].value == "report") {
-                    dex += 6;
                     wis += 6;
-                    hp += 100;
+                    agi += 6;
+                    hp += 120;
                     vit -= 4;
                     spr -= 4;
                     cha -= 4;
@@ -253,9 +264,10 @@ function register() {
                 }
                 if (store[i].value == "watch") {
                     wis += 6;
-                    vit += 4
-                    hp += 4;
-                    cha -= 2;
+                    vit += 4;
+                    hp += 40;
+                    agi += 2;
+                    cha -= 4;
                     spr -= 2;
                     ans += 1;    
                 } 
@@ -263,37 +275,57 @@ function register() {
                 //Question 8: Archives
                 if (store[i].value == "sword") {
                     str += 4;
+                    agi += 4;
                     cha += 4;
                     hp += 20;
+                    mp -= 40;
                     ans += 1;    
                 }
                 if (store[i].value == "sage") {
-                    int += 4;
-                    wis += 4;
-                    mp += 20;
+                    int += 6;
+                    wis += 6;
+                    mp += 80;
+                    str -= 6;
+                    vit -= 4;
                     ans += 1;    
                 }
                 if (store[i].value == "tamer") {
-                    mp += 40;
-                    
+                    mp += 60;
+                    wis += 4;
+                    hp += 40;
+                    str -= 4;
                     ans += 1;    
                 }
                 if (store[i].value == "faith") {
-                    spr += 6;
+                    spr += 8;
                     cha += 2;
                     mp += 20;
+                    str -= 2;
                     ans += 1;    
                 }
                 if (store[i].value == "adventurer") {
-                 
+                    str += 3;
+                    dex += 3;
+                    agi += 3;
+                    hp += 30;
+                    cha += 3;
+                    spr -= 5;
                     ans += 1;    
                 }
                 if (store[i].value == "botanist") {
-                 
+                    dex += 5;
+                    spr += 3;
+                    wis += 3;
+                    int += 3;
+                    str -= 4;
                     ans += 1;    
                 }
                 if (store[i].value == "arch") {
-                 
+                    wis += 8;
+                    int += 2;
+                    mp += 20;
+                    spr += 2;
+                    str -= 4;
                     ans += 1;    
                 }
             
@@ -361,6 +393,7 @@ function register() {
         + strStr.fontcolor("#8b0000") + str + "<br>" 
         + strVit.fontcolor("#00cd66") + vit + "<br>" 
         + strDex.fontcolor("#ffff00") + dex + "<br>"
+        + strAgi.fontcolor("#F8F8FF") + agi + "<br>"
         + strInt.fontcolor("#b0e0e6") + int + "<br>"
         + strWis.fontcolor("#dda0dd") + wis + "<br>"
         + strSpr.fontcolor("#e6e6fa") + spr + "<br>"
