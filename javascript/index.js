@@ -1,3 +1,25 @@
+var strHP = "Health Points: ";
+var strMP = "Mana Points: ";
+var strStr = "Strength: ";
+var strVit = "Vitality: ";
+var strDex = "Dexterity: ";
+var strAgi = "Agility: ";
+var strInt = "Intelligence: ";
+var strWis = "Wisdom: ";
+var strSpr = "Spirit: ";
+var strCha = "Charisma: ";
+
+var exHP = "";
+var exMP = "";
+var exStr = "";
+var exVit = "";
+var exDex = "";
+var exAgi = "";
+var exInt = "";
+var exWis = "";
+var exSpr = "";
+var exCha = "";
+var exSkills = "";
 
 function register() {
     var hp = 100;
@@ -11,29 +33,7 @@ function register() {
     var cha = 10;
     var spr = 10;
     var ans = 0;
-    
-    var strHP = "Health Points: ";
-    var strMP = "Mana Points: ";
-    var strStr = "Strength: ";
-    var strVit = "Vitality: ";
-    var strDex = "Dexterity: ";
-    var strAgi = "Agility: ";
-    var strInt = "Intelligence: ";
-    var strWis = "Wisdom: ";
-    var strSpr = "Spirit: ";
-    var strCha = "Charisma: ";
 
-    var exHP = "";
-    var exMP = "";
-    var exStr = "";
-    var exVit = "";
-    var exDex = "";
-    var exAgi = "";
-    var exInt = "";
-    var exWis = "";
-    var exSpr = "";
-    var exCha = "";
-    var exSkills = "";
 
     var store = document.forms[0];
     var output = "";
