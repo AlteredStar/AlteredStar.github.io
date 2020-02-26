@@ -21,6 +21,8 @@ var exSpr = "";
 var exCha = "";
 var exSkills = "";
 
+var temp = 0;
+
 function register() {
     var hp = 100;
     var mp = 100;
@@ -399,7 +401,7 @@ function register() {
             
         }
     }
-    var temp = 0;
+
     if (exHP < 0) {
         temp = hp - 10;
         hp = 10;
