@@ -402,61 +402,61 @@ function register() {
         }
     }
 
-    if (exHP < 0) {
+    if (hp < 0) {
         temp = hp - 10;
         hp = 10;
         exHP = " (" + temp + ")";
         exSkill += "+Weak Constitution - ";
     }
-    if (exMP < 0) {
+    if (mp < 0) {
         temp = mp - 10;
         mp = 10
         exMP = " (" + temp + ")"; 
         exSkill += "+Null Magic Body - ";
     }
-    if (exStr < 0) {
+    if (str < 0) {
         temp = str - 1;
         str = 1;
         exStr = " (" + temp + ")"; 
         exSkill += "+Soft Bones - ";
     }
-    if (exVit < 0) {
+    if (vit < 0) {
         temp = vit - 1;
         vit = 1;
         exVit = " (" + temp + ")"; 
         exSkill += "+Frail - ";
     }
-    if (exDex < 0) {
+    if (dex < 0) {
         temp = dex - 1;
         dex = 1;
         exDex = " (" + temp + ")"; 
         exSkill += "+Stiff - ";
     }
-    if (exAgi < 0) {
+    if (agi < 0) {
         temp = agi - 1;
         agi = 1;
         exAgi = " (" + temp + ")"; 
         exSkill += "+Hobble - ";
     }
-    if (exInt < 0) {
+    if (int < 0) {
         temp = int - 1;
         int = 1;
         exInt = " (" + temp + ")"; 
         exSkill += "+Lag - ";
     }
-    if (exWis < 0) {
+    if (wis < 0) {
         temp = wis - 1;
         wis = 1;
         exWis = " (" + temp + ")"; 
         exSkill += "+Fool - ";
     }
-    if (exSpr < 0) {
+    if (spr < 0) {
         temp = spr - 1;
         spr = 1;
         exSpr = " (" + temp + ")"; 
         exSkill += "+Coward - ";
     }
-    if (exCha < 2) {
+    if (cha < 2) {
         temp = cha - 1;
         cha = 1;
         exCha = " (" + temp + ")"; 
