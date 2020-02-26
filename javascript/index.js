@@ -9,6 +9,17 @@ var strWis = "Wisdom: ";
 var strSpr = "Spirit: ";
 var strCha = "Charisma: ";
 
+var exHP = "";
+var exMP = "";
+var exStr = "";
+var exVit = "";
+var exDex = "";
+var exAgi = "";
+var exInt = "";
+var exWis = "";
+var exSpr = "";
+var exCha = "";
+
 function register() {
     var hp = 100;
     var mp = 100;
@@ -331,7 +342,7 @@ function register() {
             
                 //Question 9: Murder Mystery 
                 if (store[i].value == "butler") {
-                    
+                    str += 1000;
                     ans += 1;    
                 }
                 if (store[i].value == "maid") {
@@ -386,18 +397,70 @@ function register() {
                 } */
             
         }
-    }        
+    }
+    var temp = 0;
+    if (exHP < 0) {
+        temp = hp - 10;
+        hp = 10;
+        exHP = " (" + temp + ")";  
+    }
+    if (exMP < 0) {
+        temp = mp - 10;
+        mp = 10
+        exMP = " (" + temp + ")";    
+    }
+    if (exStr < 0) {
+        temp = str - 1;
+        str = 1;
+        exStr = " (" + temp + ")"; 
+    }
+    if (exVit < 0) {
+        temp = vit - 1;
+        vit = 1;
+        exVit = " (" + temp + ")"; 
+    }
+    if (exDex < 0) {
+        temp = dex - 1;
+        dex = 1;
+        exDex = " (" + temp + ")"; 
+    }
+    if (exAgi < 0) {
+        temp = agi - 1;
+        agi = 1;
+        exAgi = " (" + temp + ")"; 
+    }
+    if (exInt < 0) {
+        temp = int - 1;
+        int = 1;
+        exInt = " (" + temp + ")"; 
+    }
+    if (exWis < 0) {
+        temp = wis - 1;
+        wis = 1;
+        exWis = " (" + temp + ")"; 
+    }
+    if (exSpr < 0) {
+        temp = spr - 1;
+        spr = 1;
+        exSpr = " (" + temp + ")"; 
+    }
+    if (exCha < 2) {
+        temp = cha - 1;
+        cha = 1;
+        exCha = " (" + temp + ")"; 
+    }
+    
     output = output 
-        + strHP.fontcolor("#DC143C") + hp + "<br>"
-        + strMP.fontcolor("#0000cd") + mp + "<br>"
-        + strStr.fontcolor("#8b0000") + str + "<br>" 
-        + strVit.fontcolor("#00cd66") + vit + "<br>" 
-        + strDex.fontcolor("#ffff00") + dex + "<br>"
-        + strAgi.fontcolor("#F8F8FF") + agi + "<br>"
-        + strInt.fontcolor("#b0e0e6") + int + "<br>"
-        + strWis.fontcolor("#dda0dd") + wis + "<br>"
-        + strSpr.fontcolor("#e6e6fa") + spr + "<br>"
-        + strCha.fontcolor("#ffc0cb") + cha + "<br>";
+        + strHP.fontcolor("#DC143C") + hp + exHP + "<br>"
+        + strMP.fontcolor("#0000cd") + mp + exMP + "<br>"
+        + strStr.fontcolor("#8b0000") + str + exStr + "<br>" 
+        + strVit.fontcolor("#00cd66") + vit + exVit + "<br>" 
+        + strDex.fontcolor("#ffff00") + dex + exDex + "<br>"
+        + strAgi.fontcolor("#F8F8FF") + agi + exAgi + "<br>"
+        + strInt.fontcolor("#b0e0e6") + int + exInt + "<br>"
+        + strWis.fontcolor("#dda0dd") + wis + exWis + "<br>"
+        + strSpr.fontcolor("#e6e6fa") + spr + exWis + "<br>"
+        + strCha.fontcolor("#ffc0cb") + cha + exCha + "<br>";
     
     if (ans < 6) {
         document.getElementById("result").innerHTML = "you only answered " + ans + " questions, please answer all the questions :(";
