@@ -345,7 +345,7 @@ function register() {
             
                 //Question 9: Murder Mystery 
                 if (store[i].value == "butler") {
-                    str -= 1000;
+                    str -= 100;
                     ans += 1;    
                 }
                 if (store[i].value == "maid") {
@@ -405,61 +405,61 @@ function register() {
     if (hp < 0) {
         temp = hp - 10;
         hp = 10;
-        exHP = " (" + temp + ")";
+        //exHP = " (" + temp + ")";
         exSkill += "+Weak Constitution - ";
     }
     if (mp < 0) {
         temp = mp - 10;
         mp = 10
-        exMP = " (" + temp + ")"; 
+        //exMP = " (" + temp + ")"; 
         exSkill += "+Null Magic Body - ";
     }
     if (str < 0) {
         temp = str - 1;
         str = 1;
-        exStr = " (" + temp + ")"; 
+        //exStr = " (" + temp + ")"; 
         exSkill += "+Soft Bones - ";
     }
     if (vit < 0) {
         temp = vit - 1;
         vit = 1;
-        exVit = " (" + temp + ")"; 
+        //exVit = " (" + temp + ")"; 
         exSkill += "+Frail - ";
     }
     if (dex < 0) {
         temp = dex - 1;
         dex = 1;
-        exDex = " (" + temp + ")"; 
+        //exDex = " (" + temp + ")"; 
         exSkill += "+Stiff - ";
     }
     if (agi < 0) {
         temp = agi - 1;
         agi = 1;
-        exAgi = " (" + temp + ")"; 
+        //exAgi = " (" + temp + ")"; 
         exSkill += "+Hobble - ";
     }
     if (int < 0) {
         temp = int - 1;
         int = 1;
-        exInt = " (" + temp + ")"; 
+        //exInt = " (" + temp + ")"; 
         exSkill += "+Lag - ";
     }
     if (wis < 0) {
         temp = wis - 1;
         wis = 1;
-        exWis = " (" + temp + ")"; 
+        //exWis = " (" + temp + ")"; 
         exSkill += "+Fool - ";
     }
     if (spr < 0) {
         temp = spr - 1;
         spr = 1;
-        exSpr = " (" + temp + ")"; 
+        //exSpr = " (" + temp + ")"; 
         exSkill += "+Coward - ";
     }
     if (cha < 2) {
         temp = cha - 1;
         cha = 1;
-        exCha = " (" + temp + ")"; 
+        //exCha = " (" + temp + ")"; 
         exSkill += "+Awkward - ";
     }
     
