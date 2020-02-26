@@ -343,7 +343,7 @@ function register() {
             
                 //Question 9: Murder Mystery 
                 if (store[i].value == "butler") {
-                    str += 1000;
+                    str -= 1000;
                     ans += 1;    
                 }
                 if (store[i].value == "maid") {
