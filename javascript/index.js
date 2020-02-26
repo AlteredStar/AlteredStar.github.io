@@ -19,7 +19,7 @@ var exInt = "";
 var exWis = "";
 var exSpr = "";
 var exCha = "";
-var exSkills = "";
+var exSkill = "";
 
 var temp = 0;
 
