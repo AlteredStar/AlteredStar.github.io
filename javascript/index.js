@@ -1,24 +1,3 @@
-var strHP = "Health Points: ";
-var strMP = "Mana Points: ";
-var strStr = "Strength: ";
-var strVit = "Vitality: ";
-var strDex = "Dexterity: ";
-var strAgi = "Agility: ";
-var strInt = "Intelligence: ";
-var strWis = "Wisdom: ";
-var strSpr = "Spirit: ";
-var strCha = "Charisma: ";
-
-var exHP = "";
-var exMP = "";
-var exStr = "";
-var exVit = "";
-var exDex = "";
-var exAgi = "";
-var exInt = "";
-var exWis = "";
-var exSpr = "";
-var exCha = "";
 
 function register() {
     var hp = 100;
@@ -33,7 +12,29 @@ function register() {
     var spr = 10;
     var ans = 0;
     
-    
+    var strHP = "Health Points: ";
+    var strMP = "Mana Points: ";
+    var strStr = "Strength: ";
+    var strVit = "Vitality: ";
+    var strDex = "Dexterity: ";
+    var strAgi = "Agility: ";
+    var strInt = "Intelligence: ";
+    var strWis = "Wisdom: ";
+    var strSpr = "Spirit: ";
+    var strCha = "Charisma: ";
+
+    var exHP = "";
+    var exMP = "";
+    var exStr = "";
+    var exVit = "";
+    var exDex = "";
+    var exAgi = "";
+    var exInt = "";
+    var exWis = "";
+    var exSpr = "";
+    var exCha = "";
+    var exSkills = "";
+
     var store = document.forms[0];
     var output = "";
     
@@ -402,52 +403,62 @@ function register() {
     if (exHP < 0) {
         temp = hp - 10;
         hp = 10;
-        exHP = " (" + temp + ")";  
+        exHP = " (" + temp + ")";
+        exSkill += "+Weak Constitution - ";
     }
     if (exMP < 0) {
         temp = mp - 10;
         mp = 10
-        exMP = " (" + temp + ")";    
+        exMP = " (" + temp + ")"; 
+        exSkill += "+Null Magic Body - ";
     }
     if (exStr < 0) {
         temp = str - 1;
         str = 1;
         exStr = " (" + temp + ")"; 
+        exSkill += "+Soft Bones - ";
     }
     if (exVit < 0) {
         temp = vit - 1;
         vit = 1;
         exVit = " (" + temp + ")"; 
+        exSkill += "+Frail - ";
     }
     if (exDex < 0) {
         temp = dex - 1;
         dex = 1;
         exDex = " (" + temp + ")"; 
+        exSkill += "+Stiff - ";
     }
     if (exAgi < 0) {
         temp = agi - 1;
         agi = 1;
         exAgi = " (" + temp + ")"; 
+        exSkill += "+Hobble - ";
     }
     if (exInt < 0) {
         temp = int - 1;
         int = 1;
         exInt = " (" + temp + ")"; 
+        exSkill += "+Lag - ";
     }
     if (exWis < 0) {
         temp = wis - 1;
         wis = 1;
         exWis = " (" + temp + ")"; 
+        exSkill += "+Fool - ";
     }
     if (exSpr < 0) {
         temp = spr - 1;
         spr = 1;
         exSpr = " (" + temp + ")"; 
+        exSkill += "+Coward - ";
     }
     if (exCha < 2) {
         temp = cha - 1;
         cha = 1;
         exCha = " (" + temp + ")"; 
+        exSkill += "+Awkward - ";
     }
     
     output = output 
@@ -460,7 +471,8 @@ function register() {
         + strInt.fontcolor("#b0e0e6") + int + exInt + "<br>"
         + strWis.fontcolor("#dda0dd") + wis + exWis + "<br>"
         + strSpr.fontcolor("#e6e6fa") + spr + exWis + "<br>"
-        + strCha.fontcolor("#ffc0cb") + cha + exCha + "<br>";
+        + strCha.fontcolor("#ffc0cb") + cha + exCha + "<br>"
+        + exSkill + "<br>";
     
     if (ans < 6) {
         document.getElementById("result").innerHTML = "you only answered " + ans + " questions, please answer all the questions :(";
