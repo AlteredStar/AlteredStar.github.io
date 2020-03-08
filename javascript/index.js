@@ -406,61 +406,61 @@ function register() {
         temp = hp - 10;
         hp = 10;
         //exHP = " (" + temp + ")";
-        exSkill += "+Weak Constitution - ";
+        exSkill += "+Weak Constitution - <BR>";
     }
     if (mp < 0) {
         temp = mp - 10;
         mp = 10
         //exMP = " (" + temp + ")"; 
-        exSkill += "+Null Magic Body - ";
+        exSkill += "+Null Magic Body - <BR>";
     }
     if (str < 0) {
         temp = str - 1;
         str = 1;
         //exStr = " (" + temp + ")"; 
-        exSkill += "+Soft Bones - ";
+        exSkill += "+Soft Bones - <BR>";
     }
     if (vit < 0) {
         temp = vit - 1;
         vit = 1;
         //exVit = " (" + temp + ")"; 
-        exSkill += "+Frail - ";
+        exSkill += "+Frail - <BR>";
     }
     if (dex < 0) {
         temp = dex - 1;
         dex = 1;
         //exDex = " (" + temp + ")"; 
-        exSkill += "+Stiff - ";
+        exSkill += "+Stiff - <BR>";
     }
     if (agi < 0) {
         temp = agi - 1;
         agi = 1;
         //exAgi = " (" + temp + ")"; 
-        exSkill += "+Hobble - ";
+        exSkill += "+Hobble - <BR>";
     }
     if (int < 0) {
         temp = int - 1;
         int = 1;
         //exInt = " (" + temp + ")"; 
-        exSkill += "+Lag - ";
+        exSkill += "+Slow - <BR>";
     }
     if (wis < 0) {
         temp = wis - 1;
         wis = 1;
         //exWis = " (" + temp + ")"; 
-        exSkill += "+Fool - ";
+        exSkill += "+Fool - <BR>";
     }
     if (spr < 0) {
         temp = spr - 1;
         spr = 1;
         //exSpr = " (" + temp + ")"; 
-        exSkill += "+Coward - ";
+        exSkill += "+Coward - <BR>";
     }
     if (cha < 2) {
         temp = cha - 1;
         cha = 1;
         //exCha = " (" + temp + ")"; 
-        exSkill += "+Awkward - ";
+        exSkill += "+Awkward - <BR>";
     }
     
     output = output 
