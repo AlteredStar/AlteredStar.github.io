@@ -361,24 +361,23 @@ function register() {
                     ans += 1;    
                 } 
             
-                //Question 10: 
-                /*
-                if (store[i].value == "") {
+                //Question 10: The Second Crossroad, Journey 
+                if (store[i].value == "north") {
                  
                     ans += 1;    
                 }
-                if (store[i].value == "") {
+                if (store[i].value == "east") {
                  
                     ans += 1;    
                 }
-                if (store[i].value == "") {
+                if (store[i].value == "south") {
                  
                     ans += 1;    
                 }
-                if (store[i].value == "") {
+                if (store[i].value == "west") {
                  
                     ans += 1;    
-                } */
+                } 
             
                 //Question 11: 
                 /*
@@ -473,7 +472,7 @@ function register() {
         + strInt.fontcolor("#b0e0e6") + int + exInt + "<br>"
         + strWis.fontcolor("#dda0dd") + wis + exWis + "<br>"
         + strSpr.fontcolor("#e6e6fa") + spr + exWis + "<br>"
-        + strCha.fontcolor("#ffc0cb") + cha + exCha + "<br>"
+        + strCha.fontcolor("#ffc0cb") + cha + exCha + "<br><br>"
         + exSkill + "<br>";
     
     if (ans < 6) {
