@@ -44,34 +44,19 @@ function register() {
         if (store[i].checked) {
                 //Question 1: Crossroads
                 if (store[i].value == "forest") {
-                    str += 5;
-                    agi += 5;
-                    cha += 3;
-                    int -= 3;
+                    
                     ans += 1;
                 }
                 if (store[i].value == "mansion") {
-                    int += 7;
-                    mp += 30;
-                    cha += 3;
-                    str -= 3;
+                    
                     ans += 1;
                 }
                 if (store[i].value == "home") {
-                    spr += 6;
-                    hp += 50;
-                    mp += 50;
-                    agi += 2;
-                    cha -= 4;
-                    int -= 4;
+                    
                     ans += 1;
                 }
                 if (store[i].value == "camp") {
-                    wis += 6;
-                    dex += 6;
-                    vit += 4;
-                    hp -= 20;
-                    agi -= 4;
+                    
                     ans +=1;
                 }
                 
@@ -379,8 +364,25 @@ function register() {
                     ans += 1;    
                 } 
             
-                //Question 11: 
-                /*
+                //Question 11: Nobility
+                if (store[i].value == "guild") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "academy") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "knight") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "devote") {
+                 
+                    ans += 1;    
+                }
+            
+                //Question 12: 
                 if (store[i].value == "") {
                  
                     ans += 1;    
@@ -396,7 +398,79 @@ function register() {
                 if (store[i].value == "") {
                  
                     ans += 1;    
-                } */
+                } 
+            
+                //Question 13: 
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } 
+            
+                //Question 14: 
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } 
+            
+                //Question 15: 
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } 
+            
+                //Question 16: 
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                }
+                if (store[i].value == "") {
+                 
+                    ans += 1;    
+                } 
             
         }
     }
