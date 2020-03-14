@@ -22,6 +22,20 @@ var exCha = "";
 var exSkill = "";
 
 var temp = 0;
+var storage = new Array();
+var storagePos = 0;
+
+function reset() {
+    storage = new Array();
+    storagePos = 0;
+} 
+
+function send() {
+   var tempStore = document.forms[0]; 
+   
+}
+       
+}
 
 function register() {
     var hp = 100;
