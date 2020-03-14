@@ -35,7 +35,6 @@ function send() {
    
 }
        
-}
 
 function register() {
     var hp = 100;
