@@ -549,10 +549,10 @@ function register() {
         + strCha.fontcolor("#ffc0cb") + cha + exCha + "<br><br>"
         + exSkill + "<br>";
     
-    if (ans < 6) {
+    if (ans < 2) {
         document.getElementById("result").innerHTML = "you only answered " + ans + " questions, please answer all the questions :(";
     }
-    if (ans > 5) {
+    else {
         document.getElementById("result").innerHTML = output;
         disableButton();
     }
