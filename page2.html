@@ -1,7 +1,106 @@
+<!DOCTYPE html>
 <html>
+  <!--
+  To Do List:
+  1. Experiment with special text, ex: floating, shifting, changing colors
+  2. Experiment with page links and transitions instead of singular body formatting
+  3. Play with backgrounds, scenes, graphics
+  4. music
+  5. non linear story pathing maybe
+  -->
+<head>
+<script async src="./javascript/index.js"></script>
+<style>
+    body {
+      background-color: #222222;
+      font-family: Arial;
+    }
+
+    .base {
+      background-color: #696969;
+      color: #F0FFFF;
+      text-align: center;
+      margin: 50px;
+      margin-top: 50px;
+      margin-left: 150px;
+      margin-right: 150px;
+      padding-top: 50px;
+      padding-bottom: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  
+    .base2 {
+      background-color: #696969;
+      color: #F0FFFF;
+      margin: 50px;
+      margin-top: 50px;
+      margin-left: 150px;
+      margin-right: 150px;
+      padding-top: 50px;
+      padding-bottom: 100px;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    
+</style>
+    
+<font color="#F0FFFF">
+<title>My webpage!</title>
+</font>
+</head>
+  
 <body>
-
-<p> Success </p>
-
+<font color="#F0FFFF">
+      
+  <h1 style="text-align:center"> Welcome to Character Creation!</h1>
+  <p style="text-align:center"> 
+  By: SnowyStar<BR>
+  Currently 9 / 29 questions implemented. <BR><BR>
+  There are 10 attributes that you may increase or decrease as the result of your decisions.
+  </p> <br>
+   
+      <div class="base2">
+          
+          <form>
+          
+          <div id="q2">
+          <h2 style="text-align:center"> Question 2: Pouch of Gold </h2>
+          <p> 
+          During a trip to the market, you find a pouch on the ground in an isolated alleyway containing a handful of gold coins, enough to let you live comfortably for half a year. <BR><BR><BR>
+          You may give the pouch to the nearby guards who have a reputation for being fair to the citizens of your town. <BR><BR>
+          You may leave the pouch where it lies. <BR><BR>
+          You may take the gold for yourself. <BR><BR>
+          You may give the pouch to the local orphanage where you have aquainted yourself with its director. <BR><BR><BR>
+          What will you do with the pouch?
+          </p>
+          <input type="radio" id="guards" 
+                 name="q2" value="guards">
+          <label for="guards"> Give the pouch to the guards. </label> 
+          <BR><BR>
+          <input type="radio" id="leave" 
+                 name="q2" value="leave">
+          <label for="leave"> Leave the pouch where it is. </label> 
+          <BR><BR>
+          <input type="radio" id="gold"
+                 name="q2" value="gold">
+          <label for="gold"> Pocket the gold. </label>
+          <BR><BR>
+          <input type="radio" id="orphanage"
+                 name="q2" value="orphanage">
+          <label for="orphanage"> Donate the gold to the local orphanage. </label>
+          <BR><BR><BR><BR>
+          </div>
+          
+          
+          
+          <input type="button" id="button" onclick="register()" value="Submit">
+          <p id="result"></p>
+          
+          </form>
+      </div>
+  
+</font>
 </body>
+  
 </html>
