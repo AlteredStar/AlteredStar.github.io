@@ -10,7 +10,7 @@ var typeAttribute = "";
 var weight = 0;
 var level = 0;
 var rarity = "";
-var json = "{
+const json = '{
 	"name": "Test Longsword",
 	"tier": "Common",
 	"level": 1,
@@ -23,7 +23,7 @@ var json = "{
 	"knockback": 1.5,
 	"stats": {},
 	"type": "weapon"
-}";
+}';
 
 function generate() {
       
