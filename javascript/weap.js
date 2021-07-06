@@ -28,5 +28,5 @@ var json = "{
 function generate() {
       
   
-    document.getElementById("result").innerHTML = json;
+    document.getElementById("product").innerHTML = json;
 }
