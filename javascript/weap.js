@@ -25,18 +25,15 @@ function generate() {
             if (!(weapArr[i+1] > 0))
                 name+= " ";
         }
-        
-        
     }
     
     
-    
-    //json += "<br \>" + storeWeap; 
   
     document.getElementById("product").innerHTML = weapArr;
     $('#weapData').val('');
 }
 
+/*
 function removeBlanks(arr, value) {
     var i = 0;
     while (i < arr.length) {
@@ -49,3 +46,4 @@ function removeBlanks(arr, value) {
     }
   return arr; 
 }
+*/
