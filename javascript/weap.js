@@ -78,6 +78,7 @@ function generate() {
     
              
     document.getElementById("product").innerHTML = json;
+    document.getElementById("weapResult").value = json;
     $('#weapData').val('');
 }
 
