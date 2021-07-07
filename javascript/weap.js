@@ -19,7 +19,7 @@ function generate() {
     
     for (let i = 0; i < weapArr.length; i++) {
         var boo = true;
-        boo = !(wearArr[i].charAt(0) > 0);
+        boo = !(weapArr[i].charAt(0) > 0);
         if (i < 3 && boo) {
             name += weapArr[i]
             if (!(weapArr[i+1] > 0))
