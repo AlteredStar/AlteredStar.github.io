@@ -1,7 +1,7 @@
 function generate() {
     var storeWeap = "";
     var name = "";
-    var nameCounter = 0;
+    var nameCounter = 1;
     var tier = "";
     var level = 1;
     var weap = "";
@@ -31,7 +31,7 @@ function generate() {
             }
         }
     }
-    weapArr.splice(0, nameCounter++);
+    weapArr.splice(0, nameCounter);
     //fetch weap
     weap = weapArr[weapArr.length-1];
     weapArr.splice(weapArr.length-1, 1);
