@@ -9,10 +9,9 @@ var typeAttribute = "";
 var weight = 0;
 var level = 0;
 var rarity = "";
-var json = "{";
 
 function generate() {
-    json = "{";
+    var json = "{";
     
     storeWeap = document.getElementById("weapData").value;
     var weapArr = storeWeap.split(" ");
@@ -22,13 +21,14 @@ function generate() {
         
         
     }
-    */
+    
     
     for (let i = 0; i < weapArr.length[0]; i++) {
         json += weapArr[i] + " ";  
     }
+    */
     //json += "<br \>" + storeWeap; 
   
-    document.getElementById("product").innerHTML = json;
+    document.getElementById("product").innerHTML = weapArr;
     $('#weapData').val('');
 }
