@@ -26,6 +26,6 @@ function generate() {
     
     json += "<br \>" + storeWeap; 
   
-    document.getElementById("product").innerHTML = weapArr;
+    document.getElementById("product").innerHTML = weapArr[4];
     $('#weapData').val('');
 }
