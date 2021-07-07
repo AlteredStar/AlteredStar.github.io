@@ -20,7 +20,7 @@ function generate() {
     for (let i = 0; i < weapArr.length; i++) {
         var boo = true;
         boo = !(weapArr[i].charAt(0) > 0);
-        if (i < 3 && boo) {
+        if (i < 4 && boo) {
             name += weapArr[i]
             if (!(weapArr[i+1] > 0))
                 name+= " ";
@@ -29,7 +29,9 @@ function generate() {
     //fetch rarity
     rarity = weapArr[weapArr.length-1];
   
-    document.getElementById("product").innerHTML = name;
+    //compile json skeleton
+    json += name + rarity;
+    document.getElementById("product").innerHTML = json;
     $('#weapData').val('');
 }
 
