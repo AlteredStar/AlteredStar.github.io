@@ -85,7 +85,7 @@ function generate() {
     jsonT += "\t\"weapon\": \"" + weap + "\",\n"
     jsonT += "\t\"weight\": \"" + weight + "\",\n"
     jsonT += "\t\"material\": \"" + material + "\",\n"
-    jsonT += "\t\"damage\": \"" + dmg + "\",<br>"
+    jsonT += "\t\"damage\": \"" + dmg + "\",\n"
     jsonT += "\t\"attackSpeed\": \"" + attackSpeed + "\",\n"
     jsonT += "\t\"attackRange\": \"" + range + "\",\n"
     jsonT += "\t\"knockback\": \"" + knockBack + "\",\n"
