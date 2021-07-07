@@ -17,6 +17,7 @@ function generate() {
     var weapArr = storeWeap.split(" ");
     //weapArr = removeBlanks(weakArr, " ");
     
+    //fetch name
     for (let i = 0; i < weapArr.length; i++) {
         var boo = true;
         boo = !(weapArr[i].charAt(0) > 0);
@@ -26,10 +27,10 @@ function generate() {
                 name+= " ";
         }
     }
-    
-    
+    //fetch rarity
+    rarity = weapArr[weapArr.length-1];
   
-    document.getElementById("product").innerHTML = weapArr;
+    document.getElementById("product").innerHTML = name;
     $('#weapData').val('');
 }
 
