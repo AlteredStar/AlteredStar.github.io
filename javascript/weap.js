@@ -24,8 +24,11 @@ function generate() {
     }
     */
     
-    json += "<br \>" + storeWeap; 
+    for (let i = 0; i < weapArr.length[0]; i++) {
+        json += weapArr[i] + " ";  
+    }
+    //json += "<br \>" + storeWeap; 
   
-    document.getElementById("product").innerHTML = weapArr[4];
+    document.getElementById("product").innerHTML = json;
     $('#weapData').val('');
 }
