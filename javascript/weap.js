@@ -11,14 +11,16 @@ function generate() {
     var attackSpeed = 0;
     var range = 0;
     var knockBack = 0;
-    var amtAttribute = 0;
-    var typeAttribute = "";
+    
+    var attLine = "";
+    var attType = "";
+    var attAmt = 0;
+    
     var jsonH = "";
     var jsonT = "";
     
     storeWeap = document.getElementById("weapData").value;
     var weapArr = storeWeap.split(" ");
-    //weapArr = removeBlanks(weakArr, " ");
     
     //fetch name
     for (let i = 0; i < weapArr.length; i++) {
@@ -61,22 +63,51 @@ function generate() {
     weight = weapArr[weapArr.length-1]
     weapArr.splice(weapArr.length-1, 1);
     
-    //compile json skeleton for html
-    jsonH += "{<br>";
-    jsonH += "\"name\": \"" + name + "\",<br>";
-    jsonH += "\"tier\": \"" + tier + "\",<br>";
-    jsonH += "\"level\": \"" + level + "\",<br>"
-    jsonH += "\"weapon\": \"" + weap + "\",<br>"
-    jsonH += "\"weight\": \"" + weight + "\",<br>"
-    jsonH += "\"material\": \"" + material + "\",<br>"
-    jsonH += "\"damage\": \"" + dmg + "\",<br>"
-    jsonH += "\"attackSpeed\": \"" + attackSpeed + "\",<br>"
-    jsonH += "\"attackRange\": \"" + range + "\",<br>"
-    jsonH += "\"knockback\": \"" + knockBack + "\",<br>"
-    jsonH += "\"stats\": {},<br>"
-    jsonH += "\"type\": \"" + "weapon" + "\"<br>"
-    jsonH += "}";
-    
+    //fetch attributes
+    while (weapArr.length > 0) {
+        attAmt = weapArr[0];
+        attType = weapArr[1];
+        weapArr.splice(0,2);
+        switch (attType) {
+            case 'STR':
+                attLine += "\n\t\t\"strength\": " + attAmt
+                if (weapArr.length != 0)
+                    attLine += ","
+                break;
+            case 'DEX':
+                attLine += "\n\t\t\"dexterity\": " + attAmt
+                if (weapArr.length != 0)
+                    attLine += ","                break;
+            case 'AGI':
+                attLine += "\n\t\t\"agility\": " + attAmt
+                if (weapArr.length != 0)
+                    attLine += ","
+                break;
+            case 'VIT':
+                attLine += "\n\t\t\"vitality\": " + attAmt
+                if (weapArr.length != 0)
+                    attLine += ","
+                break;
+            case 'END':
+                attLine += "\n\t\t\"endurance\": " + attAmt
+                if (weapArr.length != 0)
+                    attLine += ","
+                break;
+            case 'INT':     
+                attLine += "\n\t\t\"intelligence\": " + attAmt
+                if (weapArr.length != 0)
+                    attLine += ","
+                break;
+            case 'SPR':
+                attLine += "\n\t\t\"spirit\": " + attAmt
+                if (weapArr.length != 0)
+                    attLine += ","
+                break;
+            default:
+                attLine = "";
+        }
+    }
+     
     //compile json skeleton for textarea
     jsonT += "{\n";
     jsonT += "\t\"name\": \"" + name + "\",\n";
@@ -89,26 +120,11 @@ function generate() {
     jsonT += "\t\"attackSpeed\": \"" + attackSpeed + "\",\n"
     jsonT += "\t\"attackRange\": \"" + range + "\",\n"
     jsonT += "\t\"knockback\": \"" + knockBack + "\",\n"
-    jsonT += "\t\"stats\": {},\n"
+    jsonT += "\t\"stats\": {" + attLine + "\n\t},\n"
     jsonT += "\t\"type\": \"" + "weapon" + "\"\n"
     jsonT += "}";
     
-    document.getElementById("product").innerHTML = jsonH;
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
 }
 
-/*
-function removeBlanks(arr, value) {
-    var i = 0;
-    while (i < arr.length) {
-        if (arr[i] === value) {
-        arr.splice(i, 1);
-        } 
-        else {
-            ++i;
-        }
-    }
-  return arr; 
-}
-*/
