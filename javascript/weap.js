@@ -13,7 +13,8 @@ var rarity = "";
 var json = "{";
 
 function generate() {
-    json += "\n hi";
+    json += "\n\t hi";
   
     document.getElementById("product").innerHTML = json;
+    json = "{";
 }
