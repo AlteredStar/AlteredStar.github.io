@@ -31,7 +31,7 @@ function generate() {
             }
         }
     }
-    weapArr.splice(0, nameCounter);
+    weapArr.splice(0, nameCounter++);
     //fetch weap
     weap = weapArr[weapArr.length-1];
     weapArr.splice(weapArr.length-1, 1);
