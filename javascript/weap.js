@@ -1,5 +1,4 @@
 var storeWeap = "";
-var weapData = "";
 var name = "";
 var dmg = 0;
 var attackSpeed = 0;
@@ -13,7 +12,10 @@ var rarity = "";
 var json = "{";
 
 function generate() {
-    json += "<br \>" + "      " + "hi"; 
+    storeWeap = document.getElementById("weapData").value;
+    
+    
+    json += "<br \>" + storeWeap; 
   
     document.getElementById("product").innerHTML = json;
     json = "{";
