@@ -58,14 +58,16 @@
                         <input class="form-control" type="text" id="weapData" rows="10" cols="2">                           
                     </div>
             </div>
-            <input type="button" id="button" onclick="generate()" value="Generate Json">
+            <!-- <input type="button" id="button" onclick="generate()" value="Generate Json"> -->
+            <button type="button" class="btn btn-dark" onclick="generate()">Generate Json</button>
         </form>
         <form>
             <div class="mx-auto" style="width:400px;">
                 <label for="weapResult">Yield</label>
                 <textarea class="form-control" id="weapResult" style="height: 400px; width:400px;"></textarea>
             </div>
-            <button onclick="copy()">Copy the Json</button>
+            <!-- <button onclick="copy()">Copy the Json</button> -->
+            <button type="button" class="btn btn-dark" onclick="copy()">Copy Json</button>
         </form>
     </div>
     
