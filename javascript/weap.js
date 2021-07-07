@@ -2,7 +2,7 @@ function generate() {
     var storeWeap = "";
     var name = "";
     var tier = "";
-    var level = 0;
+    var level = 1;
     var weap = "";
     var weight = 0;
     var material = "";
@@ -24,7 +24,7 @@ function generate() {
         boo = !(weapArr[i].charAt(0) > -1);
         if (i < 4 && boo) {
             name += weapArr[i]
-            if (!(weapArr[i+1] > 0))
+            if (!(weapArr[i+1].charAt(0) > -1))
                 name+= " ";
         }
     }
