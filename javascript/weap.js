@@ -72,6 +72,7 @@ function generate() {
     json += "\"attackSpeed\": \"" + attackSpeed + "\",<br>"
     json += "\"attackRange\": \"" + range + "\",<br>"
     json += "\"knockback\": \"" + knockBack + "\",<br>"
+    json += "\"stats\": {},"
     json += "\"type\": \"" + "weapon" + "\"<br>"
     json += "}";
     
