@@ -15,6 +15,7 @@ function generate() {
     
     storeWeap = document.getElementById("weapData").value;
     var weapArr = storeWeap.split(" ");
+    weapArr = removeBlanks(weakArr, " ");
     /*
     for (let i = 0; i < storeWeap.length; i++) {
         var temp = "";
@@ -23,15 +24,23 @@ function generate() {
     }
     
     */
-    for (let i = 0; i < weapArr.length[0]; i++) {
-        if (weapArr[i] == " ") {
-            const index = weapArr.indexOf(" ");
-            weapArr.splice(index, 1)
-        }
-    }
+    
     
     //json += "<br \>" + storeWeap; 
   
     document.getElementById("product").innerHTML = weapArr;
     $('#weapData').val('');
+}
+
+function removeBlanks(arr, value) {
+    var i = 0;
+    while (i < arr.length) {
+        if (arr[i] === value) {
+        arr.splice(i, 1);
+        } 
+        else {
+            ++i;
+        }
+    }
+  return arr; 
 }
