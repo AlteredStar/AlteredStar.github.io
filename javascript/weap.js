@@ -12,11 +12,20 @@ var rarity = "";
 var json = "{";
 
 function generate() {
-    storeWeap = document.getElementById("weapData").value;
+    json = "{";
     
+    storeWeap = document.getElementById("weapData").value;
+    var weapArr = storeWeap.split(" ");
+    /*
+    for (let i = 0; i < storeWeap.length; i++) {
+        var temp = "";
+        
+        
+    }
+    */
     
     json += "<br \>" + storeWeap; 
   
-    document.getElementById("product").innerHTML = json;
-    json = "{";
+    document.getElementById("product").innerHTML = weapArr;
+    $('#weapData').val('');
 }
