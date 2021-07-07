@@ -28,9 +28,13 @@ function generate() {
                 name+= " ";
         }
     }
-    //fetch rarity
-    tier = weapArr[weapArr.length-1];
-  
+    //fetch weap
+    weap = weapArr[weapArr.length-1];
+    weapArr.splice(weapArr.length-1, 1);
+    //fetch material
+    material = weapArr[weapArr.length-1];
+    weapArr.splice(weapArr.length-1, 1);
+    
     //compile json skeleton
     json += "{<br>";
     json += "\"name\": \"" + name + "\",<br>";
