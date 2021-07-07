@@ -10,7 +10,7 @@ function generate() {
     var weight = 0;
     var level = 0;
     var rarity = "";
-    var json = "{\"name\": \"";
+    var json = "";
     
     storeWeap = document.getElementById("weapData").value;
     var weapArr = storeWeap.split(" ");
@@ -30,7 +30,21 @@ function generate() {
     rarity = weapArr[weapArr.length-1];
   
     //compile json skeleton
-    json += name + rarity;
+    json += "{<br>";
+    json += "\"name\": \"" + name + "\",<br>";
+    json += "\"tier\": \"" + rarity + "\",<br>";
+    json += "\"level\": \"" + level + "\",<br>"
+    json += "\"weapon\": \"" + name + "\",<br>"
+    json += "\"weight\": \"" + name + "\",<br>"
+    json += "\"material\": \"" + name + "\",<br>"
+    json += "\"damage\": \"" + name + "\",<br>"
+    json += "\"attackSpeed\": \"" + name + "\",<br>"
+    json += "\"attackRange\": \"" + name + "\",<br>"
+    json += "\"knockback\": \"" + name + "\",<br>"
+    json += "\"type\": \"" + "weapon" + "\"<br>"
+    json += "}";
+    
+             
     document.getElementById("product").innerHTML = json;
     $('#weapData').val('');
 }
