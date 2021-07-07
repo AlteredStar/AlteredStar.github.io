@@ -11,23 +11,29 @@ var level = 0;
 var rarity = "";
 
 function generate() {
-    var json = "{";
+    var json = "{\"name\": \"";
     
     storeWeap = document.getElementById("weapData").value;
     var weapArr = storeWeap.split(" ");
     //weapArr = removeBlanks(weakArr, " ");
-    /*
-    for (let i = 0; i < storeWeap.length; i++) {
-        var temp = "";
+    
+    for (let i = 0; i < weapArr.length; i++) {
+        var boo = false;
+        boo = wearArr[i] > 0;
+        if (i < 3 && !(boo)) {
+            name += weapArr[i]
+            if (!(weapArr[i+1] > 0))
+                name+= " ";
+        }
         
         
     }
-    */
+    
     
     
     //json += "<br \>" + storeWeap; 
   
-    document.getElementById("product").innerHTML = weapArr;
+    document.getElementById("product").innerHTML = name;
     $('#weapData').val('');
 }
 
