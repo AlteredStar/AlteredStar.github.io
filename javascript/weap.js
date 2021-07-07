@@ -1,6 +1,7 @@
 function generate() {
     var storeWeap = "";
     var name = "";
+    var nameCounter = 0;
     var tier = "";
     var level = 1;
     var weap = "";
@@ -24,17 +25,25 @@ function generate() {
         boo = !(weapArr[i].charAt(0) > -1);
         if (i < 4 && boo) {
             name += weapArr[i]
-            if (!(weapArr[i+1].charAt(0) > -1))
+            if (!(weapArr[i+1].charAt(0) > -1)) {
                 name+= " ";
+                nameCounter++;
+            }
         }
     }
+    weapArr.splice(0, nameCounter);
     //fetch weap
     weap = weapArr[weapArr.length-1];
     weapArr.splice(weapArr.length-1, 1);
     //fetch material
     material = weapArr[weapArr.length-1];
     weapArr.splice(weapArr.length-1, 1);
-    
+    //fetch rarity or tier
+    tier = weapArr[weapArr.length-1];
+    weapArr.splice(weapArr.length-1, 1);
+    //fetch dmg
+    dmg = weapArr[0];
+    weapArr.splice(0, 1);
     //compile json skeleton
     json += "{<br>";
     json += "\"name\": \"" + name + "\",<br>";
