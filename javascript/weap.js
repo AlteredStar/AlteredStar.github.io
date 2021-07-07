@@ -22,11 +22,14 @@ function generate() {
         
     }
     
-    
-    for (let i = 0; i < weapArr.length[0]; i++) {
-        json += weapArr[i] + " ";  
-    }
     */
+    for (let i = 0; i < weapArr.length[0]; i++) {
+        if (weapArr[i] == "") {
+            const index = weapArr.indexOf("");
+            weapArr.splice(index, 1)
+        }
+    }
+    
     //json += "<br \>" + storeWeap; 
   
     document.getElementById("product").innerHTML = weapArr;
