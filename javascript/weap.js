@@ -18,7 +18,7 @@ function generate() {
     //weapArr = removeBlanks(weakArr, " ");
     
     for (let i = 0; i < weapArr.length; i++) {
-        var boo = null;
+        var boo = true;
         boo = !(wearArr[i].charAt(0) > 0);
         if (i < 3 && boo) {
             name += weapArr[i]
