@@ -44,6 +44,22 @@ function generate() {
     //fetch dmg
     dmg = weapArr[0];
     weapArr.splice(0, 1);
+    //fetch attack speed
+    attackSpeed = weapArr[0];
+    weapArr.splice(0, 1);
+    //fetch range
+    range = weapArr[0];
+    weapArr.splice(0, 1);
+    //fetch knock back
+    knockBack = weapArr[0];
+    weapArr.splice(0, 2);
+    //fetch level
+    level = weapArr[weapArr.length-1]
+    weapArr.splice(weapArr.length-1, 1);
+    //fetch weight
+    weight = weapArr[weapArr.length-1]
+    weapArr.splice(weapArr.length-1, 1);
+    
     //compile json skeleton
     json += "{<br>";
     json += "\"name\": \"" + name + "\",<br>";
