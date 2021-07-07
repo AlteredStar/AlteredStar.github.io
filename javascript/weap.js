@@ -72,36 +72,37 @@ function generate() {
             case 'STR':
                 attLine += "\n\t\t\"strength\": " + attAmt
                 if (weapArr.length != 0)
-                    attLine += ","
+                    attLine += ",";
                 break;
             case 'DEX':
                 attLine += "\n\t\t\"dexterity\": " + attAmt
                 if (weapArr.length != 0)
-                    attLine += ","                break;
+                    attLine += ",";
+                break;
             case 'AGI':
                 attLine += "\n\t\t\"agility\": " + attAmt
                 if (weapArr.length != 0)
-                    attLine += ","
+                    attLine += ",";
                 break;
             case 'VIT':
                 attLine += "\n\t\t\"vitality\": " + attAmt
                 if (weapArr.length != 0)
-                    attLine += ","
+                    attLine += ",";
                 break;
             case 'END':
                 attLine += "\n\t\t\"endurance\": " + attAmt
                 if (weapArr.length != 0)
-                    attLine += ","
+                    attLine += ",";
                 break;
             case 'INT':     
                 attLine += "\n\t\t\"intelligence\": " + attAmt
                 if (weapArr.length != 0)
-                    attLine += ","
+                    attLine += ",";
                 break;
             case 'SPR':
                 attLine += "\n\t\t\"spirit\": " + attAmt
                 if (weapArr.length != 0)
-                    attLine += ","
+                    attLine += ",";
                 break;
             default:
                 attLine = "";
