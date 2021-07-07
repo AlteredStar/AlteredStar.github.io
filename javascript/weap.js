@@ -15,14 +15,13 @@ function generate() {
     
     storeWeap = document.getElementById("weapData").value;
     var weapArr = storeWeap.split(" ");
-    weapArr = removeBlanks(weakArr, " ");
+    //weapArr = removeBlanks(weakArr, " ");
     /*
     for (let i = 0; i < storeWeap.length; i++) {
         var temp = "";
         
         
     }
-    
     */
     
     
