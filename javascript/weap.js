@@ -78,7 +78,7 @@ function generate() {
     jsonH += "}";
     
     //compile json skeleton for textarea
-    jsonT += "{<br>";
+    jsonT += "{\n";
     jsonT += "\t\"name\": \"" + name + "\",\n";
     jsonT += "\t\"tier\": \"" + tier + "\",\n";
     jsonT += "\t\"level\": \"" + level + "\",\n"
