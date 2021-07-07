@@ -33,7 +33,7 @@ function generate() {
     
     //json += "<br \>" + storeWeap; 
   
-    document.getElementById("product").innerHTML = name;
+    document.getElementById("product").innerHTML = weapArr;
     $('#weapData').val('');
 }
 
