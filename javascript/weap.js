@@ -24,8 +24,8 @@ function generate() {
     
     */
     for (let i = 0; i < weapArr.length[0]; i++) {
-        if (weapArr[i] == "") {
-            const index = weapArr.indexOf("");
+        if (weapArr[i] == " ") {
+            const index = weapArr.indexOf(" ");
             weapArr.splice(index, 1)
         }
     }
