@@ -13,7 +13,8 @@ function generate() {
     var knockBack = 0;
     var amtAttribute = 0;
     var typeAttribute = "";
-    var json = "";
+    var jsonH = "";
+    var jsonT = "";
     
     storeWeap = document.getElementById("weapData").value;
     var weapArr = storeWeap.split(" ");
@@ -60,25 +61,40 @@ function generate() {
     weight = weapArr[weapArr.length-1]
     weapArr.splice(weapArr.length-1, 1);
     
-    //compile json skeleton
-    json += "{<br>";
-    json += "\"name\": \"" + name + "\",<br>";
-    json += "\"tier\": \"" + tier + "\",<br>";
-    json += "\"level\": \"" + level + "\",<br>"
-    json += "\"weapon\": \"" + weap + "\",<br>"
-    json += "\"weight\": \"" + weight + "\",<br>"
-    json += "\"material\": \"" + material + "\",<br>"
-    json += "\"damage\": \"" + dmg + "\",<br>"
-    json += "\"attackSpeed\": \"" + attackSpeed + "\",<br>"
-    json += "\"attackRange\": \"" + range + "\",<br>"
-    json += "\"knockback\": \"" + knockBack + "\",<br>"
-    json += "\"stats\": {},"
-    json += "\"type\": \"" + "weapon" + "\"<br>"
-    json += "}";
+    //compile json skeleton for html
+    jsonH += "{<br>";
+    jsonH += "\"name\": \"" + name + "\",<br>";
+    jsonH += "\"tier\": \"" + tier + "\",<br>";
+    jsonH += "\"level\": \"" + level + "\",<br>"
+    jsonH += "\"weapon\": \"" + weap + "\",<br>"
+    jsonH += "\"weight\": \"" + weight + "\",<br>"
+    jsonH += "\"material\": \"" + material + "\",<br>"
+    jsonH += "\"damage\": \"" + dmg + "\",<br>"
+    jsonH += "\"attackSpeed\": \"" + attackSpeed + "\",<br>"
+    jsonH += "\"attackRange\": \"" + range + "\",<br>"
+    jsonH += "\"knockback\": \"" + knockBack + "\",<br>"
+    jsonH += "\"stats\": {},<br>"
+    jsonH += "\"type\": \"" + "weapon" + "\"<br>"
+    jsonH += "}";
     
-             
-    document.getElementById("product").innerHTML = json;
-    document.getElementById("weapResult").value = json;
+    //compile json skeleton for textarea
+    jsonT += "{<br>";
+    jsonT += "\t\"name\": \"" + name + "\",\n";
+    jsonT += "\t\"tier\": \"" + tier + "\",\n";
+    jsonT += "\t\"level\": \"" + level + "\",\n"
+    jsonT += "\t\"weapon\": \"" + weap + "\",\n"
+    jsonT += "\t\"weight\": \"" + weight + "\",\n"
+    jsonT += "\t\"material\": \"" + material + "\",\n"
+    jsonT += "\t\"damage\": \"" + dmg + "\",<br>"
+    jsonT += "\t\"attackSpeed\": \"" + attackSpeed + "\",\n"
+    jsonT += "\t\"attackRange\": \"" + range + "\",\n"
+    jsonT += "\t\"knockback\": \"" + knockBack + "\",\n"
+    jsonT += "\t\"stats\": {},\n"
+    jsonT += "\t\"type\": \"" + "weapon" + "\"\n"
+    jsonT += "}";
+    
+    document.getElementById("product").innerHTML = jsonH;
+    document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
 }
 
