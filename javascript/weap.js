@@ -1,7 +1,4 @@
-var genAndCopy = document.getElementById('weapButton');
-var copyOnly = document.getElementById('copyWeapButton');
-
-genAndCopy.onclick = generate() {
+function generate() {
     var storeWeap = "";
     var name = "";
     var nameCounter = 1;
@@ -132,17 +129,9 @@ genAndCopy.onclick = generate() {
     $('#weapData').val('');
 }
 
-genAndCopy.onclick = copy() {
+function copy() {
     var copyText = document.getElementById("weapResult");
     copyText.select();
     copyText.setSelectionRange(0,99999);
     document.execCommand("copy");
 }
-
-/*
-copyOnly.onclick = copy() {
-    var copyText = document.getElementById("weapResult");
-    copyText.select();
-    copyText.setSelectionRange(0,99999);
-    document.execCommand("copy");
-} */
