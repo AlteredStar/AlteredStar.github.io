@@ -1,7 +1,7 @@
 var genAndCopy = document.getElementById('armorButton');
 var copyOnly = document.getElementById('copyArmorButton');
 
-genAndCopy.onclick = function generate() {
+genAndCopy.onclick = generate() {
     var storeArmor = "";
     var name = "";
     var nameCounter = 1;
@@ -131,14 +131,14 @@ genAndCopy.onclick = function generate() {
     $('#armorData').val('');
 }
 
-genAndCopy.onclick = function copy() {
+genAndCopy.onclick = copy() {
     var copyText = document.getElementById("weapResult");
     copyText.select();
     copyText.setSelectionRange(0,99999);
     document.execCommand("copy");
 }
 
-copyOnly.onclick = function copy() {
+copyOnly.onclick = copy() {
     var copyText = document.getElementById("weapResult");
     copyText.select();
     copyText.setSelectionRange(0,99999);
