@@ -127,6 +127,7 @@ function generate() {
     
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
+    copy();
 }
 
 function copy() {
