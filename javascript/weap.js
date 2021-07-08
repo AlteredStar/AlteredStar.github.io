@@ -64,7 +64,7 @@ function generate() {
     weapArr.splice(weapArr.length-1, 1);
     
     //fetch attributes
-    while (weapArr.length > 0) {
+    while (weapArr.length > 1) {
         attAmt = weapArr[0];
         attType = weapArr[1];
         weapArr.splice(0,2);
