@@ -18,7 +18,7 @@ function generate() {
     
     var jsonT = "";
     
-    storeArmor = document.getElementById("weapData").value;
+    storeArmor = document.getElementById("armorData").value;
     var armorArr = storeArmor.split(" ");
     
     //fetch name
@@ -124,8 +124,8 @@ function generate() {
     jsonT += "\t\"type\": \"" + "equipment" + "\"\n"
     jsonT += "}";
     
-    document.getElementById("weapResult").value = jsonT;
-    $('#weapData').val('');
+    document.getElementById("armorResult").value = jsonT;
+    $('#armorData').val('');
 }
 
 function copy() {
