@@ -139,9 +139,10 @@ genAndCopy.onclick = copy() {
     document.execCommand("copy");
 }
 
+/*
 copyOnly.onclick = copy() {
     var copyText = document.getElementById("weapResult");
     copyText.select();
     copyText.setSelectionRange(0,99999);
     document.execCommand("copy");
-}
+} */
