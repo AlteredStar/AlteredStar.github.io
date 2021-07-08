@@ -126,6 +126,7 @@ function generate() {
     
     document.getElementById("armorResult").value = jsonT;
     $('#armorData').val('');
+    copy();
 }
 
 function copy() {
