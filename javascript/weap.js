@@ -107,8 +107,10 @@ function generate() {
             default:
                 attLine = "";
         }
+        if (weapArr.length == 0)
+            attLine += "\n\t";
     }
-     
+    
     //compile json skeleton for textarea
     jsonT += "{\n";
     jsonT += "\t\"name\": \"" + name + "\",\n";
@@ -121,7 +123,7 @@ function generate() {
     jsonT += "\t\"attackSpeed\": \"" + attackSpeed + "\",\n";
     jsonT += "\t\"attackRange\": \"" + range + "\",\n";
     jsonT += "\t\"knockback\": \"" + knockBack + "\",\n";
-    jsonT += "\t\"stats\": {" + attLine + "\n\t},\n";
+    jsonT += "\t\"stats\": {" + attLine + "},\n";
     jsonT += "\t\"type\": \"" + "weapon" + "\"\n";
     jsonT += "}";
     
