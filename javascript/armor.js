@@ -106,6 +106,8 @@ function generate() {
             default:
                 attLine = "";
         }
+        if (armorArr.length == 0)
+            attLine += "\n\t";
     }
      
     //compile json skeleton for textarea
@@ -120,7 +122,7 @@ function generate() {
     jsonT += "\t\"health\": \"" + hp + "\",\n"
     jsonT += "\t\"armor\": \"" + armor + "\",\n"
     jsonT += "\t\"resistance\": \"" + res + "\",\n"
-    jsonT += "\t\"stats\": {" + attLine + "\n\t},\n"
+    jsonT += "\t\"stats\": {" + attLine + "},\n"
     jsonT += "\t\"type\": \"" + "equipment" + "\"\n"
     jsonT += "}";
     
