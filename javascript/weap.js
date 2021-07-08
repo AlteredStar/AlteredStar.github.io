@@ -113,16 +113,16 @@ function generate() {
     jsonT += "{\n";
     jsonT += "\t\"name\": \"" + name + "\",\n";
     jsonT += "\t\"tier\": \"" + tier + "\",\n";
-    jsonT += "\t\"level\": \"" + level + "\",\n"
-    jsonT += "\t\"weapon\": \"" + weap + "\",\n"
-    jsonT += "\t\"weight\": \"" + weight + "\",\n"
-    jsonT += "\t\"material\": \"" + material + "\",\n"
-    jsonT += "\t\"damage\": \"" + dmg + "\",\n"
-    jsonT += "\t\"attackSpeed\": \"" + attackSpeed + "\",\n"
-    jsonT += "\t\"attackRange\": \"" + range + "\",\n"
-    jsonT += "\t\"knockback\": \"" + knockBack + "\",\n"
-    jsonT += "\t\"stats\": {" + attLine + "\n\t},\n"
-    jsonT += "\t\"type\": \"" + "weapon" + "\"\n"
+    jsonT += "\t\"level\": \"" + level + "\",\n";
+    jsonT += "\t\"weapon\": \"" + weap + "\",\n";
+    jsonT += "\t\"weight\": \"" + weight + "\",\n";
+    jsonT += "\t\"material\": \"" + material + "\",\n";
+    jsonT += "\t\"damage\": \"" + dmg + "\",\n";
+    jsonT += "\t\"attackSpeed\": \"" + attackSpeed + "\",\n";
+    jsonT += "\t\"attackRange\": \"" + range + "\",\n";
+    jsonT += "\t\"knockback\": \"" + knockBack + "\",\n";
+    jsonT += "\t\"stats\": {" + attLine + "\n\t},\n";
+    jsonT += "\t\"type\": \"" + "weapon" + "\"\n";
     jsonT += "}";
     
     document.getElementById("weapResult").value = jsonT;
