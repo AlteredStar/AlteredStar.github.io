@@ -38,8 +38,8 @@ function generate() {
     if (armorArr[armorArr.length-1].charAt(0) == "#") {
         color = armorArr[armorArr.length-1];
         hasColor = true;
+        armorArr.splice(armorArr.length-1, 1);
     }
-    armorArr.splice(armorArr.length-1, 1);
     //fetch material
     material = armorArr[armorArr.length-1];
     armorArr.splice(armorArr.length-1, 1);
