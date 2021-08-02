@@ -63,7 +63,7 @@ function generate() {
     armorArr.splice(armorArr.length-1, 1);
     
     //fetch attributes
-    while (armorArr.length > 0) {
+    while (armorArr.length > 1) {
         attAmt = armorArr[0];
         attType = armorArr[1];
         armorArr.splice(0,2);
