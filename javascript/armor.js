@@ -132,7 +132,7 @@ function generate() {
 }
 
 function copy() {
-    var copyText = document.getElementById("weapResult");
+    var copyText = document.getElementById("armorResult");
     copyText.select();
     copyText.setSelectionRange(0,99999);
     document.execCommand("copy");
