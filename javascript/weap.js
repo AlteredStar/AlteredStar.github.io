@@ -1,6 +1,6 @@
 function generate() {
     var storeItem = "";
-    storeItem = document.getElementById("weapdata").value;
+    storeItem = document.getElementById("weapData").value;
     var itemArr = storeItem.split(" ");
     
     if (storeItem[storeItem.length-1] == "shield")
