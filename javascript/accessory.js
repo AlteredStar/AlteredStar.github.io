@@ -27,6 +27,8 @@ function generate() {
                 nameCounter++;
             }
         }
+        else
+            i = accArr.length+1;
     }
     accArr.splice(0, nameCounter);
     //fetch type
