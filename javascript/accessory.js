@@ -100,7 +100,14 @@ function generate() {
     jsonT += "\t\"type\": \"" + type + "\"\n";
     jsonT += "}";
     
-    document.getElementById("weapResult").value = jsonT;
-    $('#weapData').val('');
+    document.getElementById("accResult").value = jsonT;
+    $('#accData').val('');
     copy();
+}
+
+function copy() {
+    var copyText = document.getElementById("accResult");
+    copyText.select();
+    copyText.setSelectionRange(0,99999);
+    document.execCommand("copy");
 }
