@@ -161,87 +161,84 @@ function generateShield() {
     //holds the json at end
     var jsonT = "";
     
-    storeWeap = document.getElementById("weapData").value;
-    var weapArr = storeWeap.split(" ");
+    storeShield = document.getElementById("weapData").value;
+    var shieldArr = storeShield.split(" ");
     
     //fetch name
-    for (let i = 0; i < weapArr.length; i++) {
+    for (let i = 0; i < shieldArr.length; i++) {
         var boo = true;
-        boo = !(weapArr[i].charAt(0) > -1);
+        boo = !(shieldArr[i].charAt(0) > -1);
         if (i < 4 && boo) {
-            name += weapArr[i]
-            if (!(weapArr[i+1].charAt(0) > -1)) {
+            name += shieldArr[i]
+            if (!(shieldArr[i+1].charAt(0) > -1)) {
                 name+= " ";
                 nameCounter++;
             }
         }
     }
-    weapArr.splice(0, nameCounter);
-    //fetch weap
-    weap = weapArr[weapArr.length-1];
-    weapArr.splice(weapArr.length-1, 1);
+    shieldArr.splice(0, nameCounter);
     //fetch rarity or tier
-    weapArr.splice(weapArr.length-1, 1);
-    tier = weapArr[weapArr.length-1];
-    weapArr.splice(weapArr.length-1, 1);
+    shieldArr.splice(shieldArr.length-1, 1);
+    tier = shieldArr[shieldArr.length-1];
+    shieldArr.splice(shieldArr.length-1, 1);
     //fetch block
-    block = weapArr[0];
-    weapArr.splice(0, 1);
+    block = shieldArr[0];
+    shieldArr.splice(0, 1);
     //fetch block recovery
-    blockRec = weapArr[0];
-    weapArr.splice(0, 1);
+    blockRec = shieldArr[0];
+    shieldArr.splice(0, 1);
     //fetch level
-    level = weapArr[weapArr.length-1]
-    weapArr.splice(weapArr.length-1, 1);
+    level = shieldArr[shieldArr.length-1]
+    shieldArr.splice(shieldArr.length-1, 1);
     //fetch weight
-    weight = weapArr[weapArr.length-1]
-    weapArr.splice(weapArr.length-1, 1);
+    weight = shieldArr[shieldArr.length-1]
+    shieldArr.splice(shieldArr.length-1, 1);
     
     //fetch attributes
-    while (weapArr.length > 1) {
-        attAmt = weapArr[0];
-        attType = weapArr[1];
-        weapArr.splice(0,2);
+    while (shieldArr.length > 1) {
+        attAmt = shieldArr[0];
+        attType = shieldArr[1];
+        shieldArr.splice(0,2);
         switch (attType) {
             case 'STR':
                 attLine += "\n\t\t\"strength\": " + attAmt
-                if (weapArr.length != 0)
+                if (shieldArr.length != 0)
                     attLine += ",";
                 break;
             case 'DEX':
                 attLine += "\n\t\t\"dexterity\": " + attAmt
-                if (weapArr.length != 0)
+                if (shieldArr.length != 0)
                     attLine += ",";
                 break;
             case 'AGI':
                 attLine += "\n\t\t\"agility\": " + attAmt
-                if (weapArr.length != 0)
+                if (shieldArr.length != 0)
                     attLine += ",";
                 break;
             case 'VIT':
                 attLine += "\n\t\t\"vitality\": " + attAmt
-                if (weapArr.length != 0)
+                if (shieldArr.length != 0)
                     attLine += ",";
                 break;
             case 'END':
                 attLine += "\n\t\t\"endurance\": " + attAmt
-                if (weapArr.length != 0)
+                if (shieldArr.length != 0)
                     attLine += ",";
                 break;
             case 'INT':     
                 attLine += "\n\t\t\"intelligence\": " + attAmt
-                if (weapArr.length != 0)
+                if (shieldArr.length != 0)
                     attLine += ",";
                 break;
             case 'SPR':
                 attLine += "\n\t\t\"spirit\": " + attAmt
-                if (weapArr.length != 0)
+                if (shieldArr.length != 0)
                     attLine += ",";
                 break;
             default:
                 attLine = "";
         }
-        if (weapArr.length == 0)
+        if (shieldArr.length == 0)
             attLine += "\n\t";
     }
     
