@@ -3,11 +3,10 @@ function generate() {
     storeItem = document.getElementById("weapdata").value;
     var itemArr = storeItem.split(" ");
     
-    for (let i = 0; i < storeItem.legnth; i++) {
-        if (storeItem[i] == "shield")
-            generateShield();
-    }
-    generateWeap();
+    if (storeItem[storeItem.length-1] == "shield")
+        generateShield();
+    else
+        generateWeap();
         
 }
 
@@ -182,6 +181,7 @@ function generateShield() {
     weap = weapArr[weapArr.length-1];
     weapArr.splice(weapArr.length-1, 1);
     //fetch rarity or tier
+    weapArr.splice(weapArr.length-1, 1);
     tier = weapArr[weapArr.length-1];
     weapArr.splice(weapArr.length-1, 1);
     //fetch block
