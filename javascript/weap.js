@@ -3,7 +3,7 @@ function generate() {
     storeItem = document.getElementById("weapData").value;
     var itemArr = storeItem.split(" ");
     
-    if (storeItem[storeItem.length-1] == "shield")
+    if (itemArr[itemArr.length-1] == "shield")
         generateShield();
     else
         generateWeap();
