@@ -22,6 +22,7 @@ function generateWeap() {
     var dmg = 0;
     var attackSpeed = 0;
     var range = 0;
+    var attackString = "";
     var knockBack = 0;
     
     var attLine = "";
@@ -73,6 +74,45 @@ function generateWeap() {
     //fetch weight
     weight = weapArr[weapArr.length-1]
     weapArr.splice(weapArr.length-1, 1);
+    
+    //fetch attackString
+    switch (weap) {
+        case 'Sword':
+            if (weight > 40)
+                attackString = "sword_heavy";
+            if (weight <= 40)
+                attackString = "sword";
+            break;
+        case 'Axe':
+            if (weight > 40)
+                attackString = "axe_battle";
+            if (weight <= 40)
+                attackString = "axe";
+            break;
+        case 'Spear':
+            attackString = "spear";
+            break;
+        case 'Scythe':
+            attackString = "scythe";
+            break;
+        case 'Dagger':
+            attackString = "dagger";
+            break;
+        case 'Bow':
+            if (weight > 25)
+                attackString = "bow_long";
+            if (weight <= 25)
+                attackString = "bow";            
+            break;
+        case 'Catalyst':
+            if (weight > 30)
+                attackString = "catalyst_tome";
+            if (weight <= 30 && weight > 20)
+                attackString = "catalyst_staff";     
+            if (weight <= 20)
+                attackString = "catalyst_wand";
+            break;
+    }
     
     //fetch attributes
     while (weapArr.length > 1) {
@@ -133,6 +173,7 @@ function generateWeap() {
     jsonT += "\t\"damage\": \"" + dmg + "\",\n";
     jsonT += "\t\"attackSpeed\": \"" + attackSpeed + "\",\n";
     jsonT += "\t\"attackRange\": \"" + range + "\",\n";
+    jsonT += "\t\"attackString\": \"" + attackString + "\",\n";
     jsonT += "\t\"knockback\": \"" + knockBack + "\",\n";
     jsonT += "\t\"stats\": {" + attLine + "},\n";
     jsonT += "\t\"type\": \"" + "weapon" + "\"\n";
