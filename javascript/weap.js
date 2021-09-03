@@ -81,28 +81,28 @@ function generateWeap() {
             if (weight > 40)
                 attackString = "sword_heavy";
             if (weight <= 40)
-                attackString = "sword";
+                attackString = null;
             break;
         case 'Axe':
             if (weight > 40)
-                attackString = "axe_battle";
+                attackString = "axe_heavy";
             if (weight <= 40)
-                attackString = "axe";
+                attackString = null;
             break;
         case 'Spear':
-            attackString = "spear";
+            attackString = null;
             break;
         case 'Scythe':
-            attackString = "scythe";
+            attackString = null;
             break;
         case 'Dagger':
-            attackString = "dagger";
+            attackString = null;
             break;
         case 'Bow':
             if (weight > 25)
                 attackString = "bow_long";
             if (weight <= 25)
-                attackString = "bow";            
+                attackString = null;            
             break;
         case 'Catalyst':
             if (weight > 30)
@@ -110,7 +110,7 @@ function generateWeap() {
             if (weight <= 30 && weight > 20)
                 attackString = "catalyst_staff";     
             if (weight <= 20)
-                attackString = "catalyst_wand";
+                attackString = null;
             break;
     }
     
