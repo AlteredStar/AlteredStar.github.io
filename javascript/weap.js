@@ -173,7 +173,10 @@ function generateWeap() {
     jsonT += "\t\"damage\": \"" + dmg + "\",\n";
     jsonT += "\t\"attackSpeed\": \"" + attackSpeed + "\",\n";
     jsonT += "\t\"attackRange\": \"" + range + "\",\n";
-    jsonT += "\t\"attackString\": \"" + attackString + "\",\n";
+    if (attackString != null)
+        jsonT += "\t\"attackString\": \"" + attackString + "\",\n";
+    else
+        jsonT += "\t\"attackString\": " + null + ",\n";
     jsonT += "\t\"knockback\": \"" + knockBack + "\",\n";
     jsonT += "\t\"stats\": {" + attLine + "},\n";
     jsonT += "\t\"type\": \"" + "weapon" + "\"\n";
