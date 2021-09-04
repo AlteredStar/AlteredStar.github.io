@@ -323,8 +323,8 @@ function generateShield() {
     document.getElementById("downloadButton")
         .addEventListener("click", function () {
             var text = document.getElementById("weapResult").value;
-            var filename = jsonFileName;
-            download(filename, text);
+            //var filename = jsonFileName;
+            download(jsonFileName, text);
         }, false);
 }
 
@@ -333,7 +333,7 @@ function download(filename, textInput) {
     element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(textInput));
     element.setAttribute('download', filename);
     document.body.appendChild(element);
-    //element.click();
+    element.click();
     document.body.removeChild(element);
 }
 
