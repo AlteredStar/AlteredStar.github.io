@@ -18,10 +18,10 @@ function generateAll() {
         
     
     if (armorArr.length == 8) {
-        helm = armorArr[0] + armorArr[1];
-        chest = armorArr[2] + armorArr[3];
-        leg = armorArr[4] + armorArr[5];
-        boots = armorArr[6] + armorArr[7];
+        helm = armorArr[0] + " " + armorArr[1];
+        chest = armorArr[2] + " " + armorArr[3];
+        leg = armorArr[4] + " " + armorArr[5];
+        boots = armorArr[6] + " " + armorArr[7];
     }
 
     
