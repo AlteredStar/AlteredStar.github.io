@@ -333,8 +333,8 @@ function download(filename, textInput) {
     element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(textInput));
     element.setAttribute('download', filename);
     document.body.appendChild(element);
-    element.click();
-    //document.body.removeChild(element);
+    //element.click();
+    document.body.removeChild(element);
 }
 
 function copy() {
