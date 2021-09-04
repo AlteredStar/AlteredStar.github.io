@@ -128,7 +128,19 @@ function generate() {
     
     document.getElementById("armorResult").value = jsonT;
     $('#armorData').val('');
-    copy();
+    
+    var jsonFileName = "";
+    jsonFileName = name;
+    jsonFileName = jsonFileName.toLowerCase();
+    jsonFileName = jsonFileName.replaceAll(" ", "_");
+    jsonFileName += ".json";
+
+    document.getElementById("downloadButton")
+        .addEventListener("click", function () {
+            var text = document.getElementById("weapResult").value;
+            var filename = jsonFileName;
+            download(filename, text);
+        }, false);
 }
 
 function copy() {
