@@ -189,7 +189,7 @@ function generateWeap() {
     var jsonFileName = "";
     jsonFileName = name;
     jsonFileName.toLowerCase();
-    jsonFileName.replace(" ", "_");
+    jsonFileName.replaceAll(' ', '_');
     jsonFileName += ".json";
 
     document.getElementById("downloadButton")
