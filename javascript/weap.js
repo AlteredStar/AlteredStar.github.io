@@ -191,13 +191,6 @@ function generateWeap() {
     jsonFileName = jsonFileName.toLowerCase();
     jsonFileName = jsonFileName.replaceAll(" ", "_");
     jsonFileName += ".json";
-
-    document.getElementById("downloadButton")
-        .addEventListener("click", function () {
-            //var text = document.getElementById("weapResult").value;
-            //var filename = jsonFileName;
-            download(jsonFileName, text);
-        }, false);
 }
 
 
@@ -315,19 +308,15 @@ function generateShield() {
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
     
-    var jsonFileName = "";
-    var text = document.getElementById("weapResult").value;
-    jsonFileName = name;
-    jsonFileName = jsonFileName.toLowerCase();
-    jsonFileName = jsonFileName.replaceAll(" ", "_");
-    jsonFileName += ".json";
+    var fileText = document.getElementById("weapResult").value;
+    var fileName = name;
+    fileName = jsonFileName.toLowerCase();
+    fileName = jsonFileName.replaceAll(" ", "_");
+    fileName += ".json";
+}
 
-    document.getElementById("downloadButton")
-        .addEventListener("click", function () {
-            //var text = document.getElementById("weapResult").value;
-            //var filename = jsonFileName;
-            download(jsonFileName, text);
-        }, false);
+function downloadJson() {
+    download(fileName, fileText);   
 }
 
 function download(filename, textInput) {
