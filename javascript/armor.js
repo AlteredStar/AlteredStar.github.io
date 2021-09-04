@@ -9,16 +9,16 @@ function generate() {
     
     var armorArrLength = armorArr.length;
     
-    helm = armorArr[0, armorArrLength/4-1);
+    helm = armorArr[0, armorArrLength/4-1];
     armorArr.splice(0, armorArrLength/4-1);
     
-    chest = armorArr[0, armorArrLength/4-1);
+    chest = armorArr[0, armorArrLength/4-1];
     armorArr.splice(0, armorArrLength/4-1);
     
-    leg = armorArr[0, armorArrLength/4-1);
+    leg = armorArr[0, armorArrLength/4-1];
     armorArr.splice(0, armorArrLength/4-1);
     
-    boots = armorArr[0, armorArrLength/4-1);
+    boots = armorArr[0, armorArrLength/4-1];
     
     generateArmor(helm);
     generateArmor(chest);
