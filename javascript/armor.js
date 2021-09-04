@@ -157,8 +157,8 @@ function generateAllArmor(storeArmor) {
     jsonT += "\t\"type\": \"" + "equipment" + "\"\n"
     jsonT += "}";
     
-    document.getElementById("allArmorResult").value = jsonT;
-    $('#armorData').val('');
+    //document.getElementById("allArmorResult").value = jsonT;
+    //$('#armorData').val('');
     
     var fileName = "";
     //var fileText = document.getElementById("allArmorResult").value;
