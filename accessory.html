@@ -61,7 +61,7 @@
                         <input class="form-control" type="text" id="accData" rows="10" cols="2">                           
                     </div>
             </div>
-            <button type="button" class="btn btn-dark" onclick="generate()">Generate Accessory Json & Copy</button>
+            <button type="button" class="btn btn-dark" onclick="generate()">Generate Accessory Json</button>
         </form>
         <form>
             <div class="mx-auto" style="width:400px;">
@@ -69,10 +69,10 @@
                 <textarea class="form-control" id="accResult" style="height: 400px; width:400px;"></textarea>
             </div>
             <div class="pt-3">
-                <button type="button" class="btn btn-dark" onclick="copy()">Copy Json</button>
+                <input type="button" id="downloadButton" class="btn btn-dark" value="Download" />
             </div>
             <div class="pt-3">
-                <input type="button" id="downloadButton" class="btn btn-dark" value="Download" />
+                <button type="button" class="btn btn-dark" onclick="copy()">Copy Json</button>
             </div>
         </form>
     </div>
