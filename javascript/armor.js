@@ -1,5 +1,33 @@
 function generate() {
-    var storeArmor = "";
+    var helm = [];
+    var chest = [];
+    var leg = [];
+    var boots = [];
+
+    var storeArmor = document.getElementById("armorData").value;
+    var armorArr = storeArmor.split(" ");
+    
+    var armorArrLength = armorArr.length;
+    
+    helm = armorArr[0, armorArrLength/4-1);
+    armorArr.splice(0, armorArrLength/4-1);
+    
+    chest = armorArr[0, armorArrLength/4-1);
+    armorArr.splice(0, armorArrLength/4-1);
+    
+    leg = armorArr[0, armorArrLength/4-1);
+    armorArr.splice(0, armorArrLength/4-1);
+    
+    boots = armorArr[0, armorArrLength/4-1);
+    
+    generateArmor(helm);
+    generateArmor(chest);
+    generateArmor(leg);
+    generateArmor(boots);
+
+}
+
+function generateArmor(armorArr) {
     var name = "";
     var nameCounter = 1;
     var tier = "";
@@ -18,8 +46,8 @@ function generate() {
     
     var jsonT = "";
     
-    storeArmor = document.getElementById("armorData").value;
-    var armorArr = storeArmor.split(" ");
+    //var storeArmor = document.getElementById("armorData").value;
+    //var armorArr = storeArmor.split(" ");
     
     //fetch name
     for (let i = 0; i < armorArr.length; i++) {
@@ -129,18 +157,22 @@ function generate() {
     document.getElementById("armorResult").value = jsonT;
     $('#armorData').val('');
     
-    var jsonFileName = "";
-    jsonFileName = name;
-    jsonFileName = jsonFileName.toLowerCase();
-    jsonFileName = jsonFileName.replaceAll(" ", "_");
-    jsonFileName += ".json";
+    var fileName = "";
+    var fileText = document.getElementById("weapResult").value;
+    fileName = name;
+    fileName = fileName.toLowerCase();
+    fileName = fileName.replaceAll(" ", "_");
+    fileName += ".json";
+    download(fileName, fileText); 
+}
 
-    document.getElementById("downloadButton")
-        .addEventListener("click", function () {
-            var text = document.getElementById("armorResult").value;
-            var filename = jsonFileName;
-            download(filename, text);
-        }, false);
+function download(filename, textInput) {
+    var element = document.createElement('a');
+    element.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(textInput));
+    element.setAttribute('download', filename);
+    document.body.appendChild(element);
+    element.click();
+    //document.body.removeChild(element);
 }
 
 function copy() {
