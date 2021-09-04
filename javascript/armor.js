@@ -3,8 +3,10 @@ function generateAll() {
     var chest = [];
     var leg = [];
     var boots = [];
-
+    var hasColor = false;
+    
     var storeArmor = document.getElementById("allArmorData").value;
+    storeArmor = storeArmor.replace("   ", "  ");
     var armorArr = storeArmor.split("  ");
     
     if (armorArr.length == 4) {
