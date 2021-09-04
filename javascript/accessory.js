@@ -113,7 +113,7 @@ function generate() {
 
     document.getElementById("downloadButton")
         .addEventListener("click", function () {
-            var text = document.getElementById("weapResult").value;
+            var text = document.getElementById("accResult").value;
             var filename = jsonFileName;
             download(filename, text);
         }, false);
