@@ -191,6 +191,7 @@ function generateWeap() {
     jsonFileName = jsonFileName.toLowerCase();
     jsonFileName = jsonFileName.replaceAll(" ", "_");
     jsonFileName += ".json";
+    download(fileName, fileText); 
 }
 
 
@@ -313,6 +314,7 @@ function generateShield() {
     fileName = jsonFileName.toLowerCase();
     fileName = jsonFileName.replaceAll(" ", "_");
     fileName += ".json";
+    download(fileName, fileText); 
 }
 
 function downloadJson() {
