@@ -1,6 +1,3 @@
-var fileName = "";
-var fileText = "";
-
 function generate() {
     var storeItem = "";
     storeItem = document.getElementById("weapData").value;
@@ -188,12 +185,12 @@ function generateWeap() {
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
     
-    jsonFileName = "";
-    text = document.getElementById("weapResult").value;
-    jsonFileName = name;
-    jsonFileName = jsonFileName.toLowerCase();
-    jsonFileName = jsonFileName.replaceAll(" ", "_");
-    jsonFileName += ".json";
+    var fileName = "";
+    var fileText = document.getElementById("weapResult").value;
+    fileName = name;
+    fileName = jsonFileName.toLowerCase();
+    fileName = jsonFileName.replaceAll(" ", "_");
+    fileName += ".json";
     download(fileName, fileText); 
 }
 
