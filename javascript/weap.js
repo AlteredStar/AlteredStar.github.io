@@ -184,12 +184,11 @@ function generateWeap() {
     
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
-    copy();
     
     var jsonFileName = "";
     jsonFileName = name;
-    jsonFileName.toLowerCase();
-    jsonFileName.replaceAll(' ', '_');
+    jsonFileName = jsonFileName.toLowerCase();
+    jsonFileName = jsonFileName.replaceAll(" ", "_");
     jsonFileName += ".json";
 
     document.getElementById("downloadButton")
@@ -314,7 +313,6 @@ function generateShield() {
     
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
-    copy();
     
     var jsonFileName = "";
     jsonFileName = name;
