@@ -70,6 +70,14 @@
             </div>
             <div class="pt-3">
             <input type="button" id="downloadButton" class="btn btn-dark" value="Download" />
+                <script>
+                    document.getElementById("downloadButton")
+                        .addEventListener("click", function () {
+                            var text = document.getElementById("weapResult").value;
+                            var filename = jsonFileName;
+                            download(filename, text);
+                        }, false);
+                </script>
             </div>
         </form>
     </div>
