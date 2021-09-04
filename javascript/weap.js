@@ -327,7 +327,7 @@ function download(filename, textInput) {
     element.setAttribute('download', filename);
     document.body.appendChild(element);
     element.click();
-    document.body.removeChild(element);
+    //document.body.removeChild(element);
 }
 
 function copy() {
