@@ -6,7 +6,7 @@ function generateAll() {
     var hasColor = false;
     
     var storeArmor = document.getElementById("allArmorData").value;
-    storeArmor = storeArmor.replace("   ", "  ");
+    storeArmor = storeArmor.replaceAll("   ", "  ");
     var armorArr = storeArmor.split("  ");
     
     if (armorArr.length == 4) {
@@ -167,6 +167,7 @@ function generateAllArmor(storeArmor) {
     fileName = name;
     fileName = fileName.toLowerCase();
     fileName = fileName.replaceAll(" ", "_");
+    fileName = fileName.replaceAll("'", "");
     fileName += ".json";
     download(fileName, jsonT); 
 }
@@ -306,6 +307,7 @@ function generate() {
     fileName = name;
     fileName = fileName.toLowerCase();
     fileName = fileName.replaceAll(" ", "_");
+    fileName = fileName.replaceAll("'", "");
     fileName += ".json";
     download(fileName, jsonT); 
 }
