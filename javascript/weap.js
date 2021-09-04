@@ -1,3 +1,6 @@
+var fileName = "";
+var fileText = "";
+
 function generate() {
     var storeItem = "";
     storeItem = document.getElementById("weapData").value;
@@ -185,8 +188,8 @@ function generateWeap() {
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
     
-    var jsonFileName = "";
-    var text = document.getElementById("weapResult").value;
+    jsonFileName = "";
+    text = document.getElementById("weapResult").value;
     jsonFileName = name;
     jsonFileName = jsonFileName.toLowerCase();
     jsonFileName = jsonFileName.replaceAll(" ", "_");
@@ -309,8 +312,8 @@ function generateShield() {
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
     
-    var fileText = document.getElementById("weapResult").value;
-    var fileName = name;
+    fileText = document.getElementById("weapResult").value;
+    fileName = name;
     fileName = jsonFileName.toLowerCase();
     fileName = jsonFileName.replaceAll(" ", "_");
     fileName += ".json";
