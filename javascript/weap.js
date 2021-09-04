@@ -316,10 +316,10 @@ function generateShield() {
     
     var jsonFileName = "";
     jsonFileName = name;
+    jsonFileName = jsonFileName.toLowerCase();
+    jsonFileName = jsonFileName.replaceAll(" ", "_");
     jsonFileName += ".json";
-    jsonFileName.toLowerCase();
-    jsonFileName.replace(" ", "_");
-    
+
     document.getElementById("downloadButton")
         .addEventListener("click", function () {
             var text = document.getElementById("weapResult").value;
