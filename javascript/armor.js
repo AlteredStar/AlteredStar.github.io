@@ -161,12 +161,12 @@ function generateAllArmor(storeArmor) {
     $('#armorData').val('');
     
     var fileName = "";
-    var fileText = document.getElementById("allArmorResult").value;
+    //var fileText = document.getElementById("allArmorResult").value;
     fileName = name;
     fileName = fileName.toLowerCase();
     fileName = fileName.replaceAll(" ", "_");
     fileName += ".json";
-    download(fileName, fileText); 
+    download(fileName, jsonT); 
 }
 
 function generate() {
@@ -300,12 +300,12 @@ function generate() {
     $('#armorData').val('');
     
     var fileName = "";
-    var fileText = document.getElementById("armorResult").value;
+    //var fileText = document.getElementById("armorResult").value;
     fileName = name;
     fileName = fileName.toLowerCase();
     fileName = fileName.replaceAll(" ", "_");
     fileName += ".json";
-    download(fileName, fileText); 
+    download(fileName, jsonT); 
 }
 
 function downloadJson() {
