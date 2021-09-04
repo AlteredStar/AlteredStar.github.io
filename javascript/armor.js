@@ -5,20 +5,23 @@ function generate() {
     var boots = [];
 
     var storeArmor = document.getElementById("armorData").value;
-    var armorArr = storeArmor.split(" ");
+    var armorArr = storeArmor.split("  ");
     
-    var armorArrLength = armorArr.length;
+    if (armorArr.length == 4) {
+        helm = armorArr[0];
+        chest = armorArr[1];
+        leg = armorArr[2];
+        boots = armorArr[3];
+    }
+        
     
-    helm = armorArr[0, armorArrLength/4-1];
-    armorArr.splice(0, armorArrLength/4-1);
-    
-    chest = armorArr[0, armorArrLength/4-1];
-    armorArr.splice(0, armorArrLength/4-1);
-    
-    leg = armorArr[0, armorArrLength/4-1];
-    armorArr.splice(0, armorArrLength/4-1);
-    
-    boots = armorArr[0, armorArrLength/4-1];
+    if (armorArr.length == 8) {
+        helm = armorArr[0] + armorArr[1];
+        chest = armorArr[2] + armorArr[3];
+        leg = armorArr[4] + armorArr[5];
+        boots = armorArr[6] + armorArr[7];
+    }
+
     
     generateArmor(helm);
     generateArmor(chest);
