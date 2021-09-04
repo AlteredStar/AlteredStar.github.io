@@ -314,6 +314,7 @@ function generateShield() {
     
     var jsonFileName = "";
     jsonFileName = name;
+    jsonFileName += ".json";
     
     document.getElementById("downloadButton")
         .addEventListener("click", function () {
