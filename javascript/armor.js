@@ -4,7 +4,7 @@ function generateAll() {
     var leg = [];
     var boots = [];
 
-    var storeArmor = document.getElementById("armorData").value;
+    var storeArmor = document.getElementById("allArmorData").value;
     var armorArr = storeArmor.split("  ");
     
     if (armorArr.length == 4) {
@@ -157,11 +157,11 @@ function generateAllArmor(storeArmor) {
     jsonT += "\t\"type\": \"" + "equipment" + "\"\n"
     jsonT += "}";
     
-    document.getElementById("armorResult").value = jsonT;
+    document.getElementById("allArmorResult").value = jsonT;
     $('#armorData').val('');
     
     var fileName = "";
-    var fileText = document.getElementById("weapResult").value;
+    var fileText = document.getElementById("allArmorResult").value;
     fileName = name;
     fileName = fileName.toLowerCase();
     fileName = fileName.replaceAll(" ", "_");
@@ -300,7 +300,7 @@ function generate() {
     $('#armorData').val('');
     
     var fileName = "";
-    var fileText = document.getElementById("weapResult").value;
+    var fileText = document.getElementById("armorResult").value;
     fileName = name;
     fileName = fileName.toLowerCase();
     fileName = fileName.replaceAll(" ", "_");
