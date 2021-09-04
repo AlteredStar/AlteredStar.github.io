@@ -309,10 +309,10 @@ function generateShield() {
     document.getElementById("weapResult").value = jsonT;
     $('#weapData').val('');
     
-    fileText = document.getElementById("weapResult").value;
-    fileName = name;
-    fileName = jsonFileName.toLowerCase();
-    fileName = jsonFileName.replaceAll(" ", "_");
+    var fileText = document.getElementById("weapResult").value;
+    var fileName = name;
+    fileName = fileName.toLowerCase();
+    fileName = fileName.replaceAll(" ", "_");
     fileName += ".json";
     download(fileName, fileText); 
 }
