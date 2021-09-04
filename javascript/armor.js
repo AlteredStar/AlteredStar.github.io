@@ -30,7 +30,7 @@ function generate() {
 
 }
 
-function generateArmor(armorArr) {
+function generateArmor(storeArmor) {
     var name = "";
     var nameCounter = 1;
     var tier = "";
@@ -50,7 +50,7 @@ function generateArmor(armorArr) {
     var jsonT = "";
     
     //var storeArmor = document.getElementById("armorData").value;
-    //var armorArr = storeArmor.split(" ");
+    var armorArr = storeArmor.split(" ");
     
     //fetch name
     for (let i = 0; i < armorArr.length; i++) {
