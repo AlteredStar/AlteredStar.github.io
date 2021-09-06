@@ -105,7 +105,7 @@ function generate() {
     document.getElementById("accResult").value = jsonT;
     $('#accData').val('');
 
-    var fileText = document.getElementById("weapResult").value;
+    var fileText = document.getElementById("accResult").value;
     var fileName = name;
     fileName = fileName.toLowerCase();
     fileName = fileName.replaceAll(" ", "_");
