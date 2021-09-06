@@ -105,18 +105,22 @@ function generate() {
     document.getElementById("accResult").value = jsonT;
     $('#accData').val('');
 
-    var jsonFileName = "";
-    jsonFileName = name;
-    jsonFileName = jsonFileName.toLowerCase();
-    jsonFileName = jsonFileName.replaceAll(" ", "_");
-    jsonFileName += ".json";
+    var fileText = document.getElementById("weapResult").value;
+    var fileName = name;
+    fileName = fileName.toLowerCase();
+    fileName = fileName.replaceAll(" ", "_");
+    fileName = fileName.replaceAll("'", "");
+    fileName += ".json";
+    download(fileName, fileText); 
+}
 
-    document.getElementById("downloadButton")
-        .addEventListener("click", function () {
-            var text = document.getElementById("accResult").value;
-            var filename = jsonFileName;
-            download(filename, text);
-        }, false);
+function download(filename, textInput) {
+    var element = document.createElement('a');
+    element.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(textInput));
+    element.setAttribute('download', filename);
+    document.body.appendChild(element);
+    element.click();
+    //document.body.removeChild(element);
 }
 
 function copy() {
