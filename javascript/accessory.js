@@ -114,6 +114,10 @@ function generate() {
     download(fileName, fileText); 
 }
 
+function downloadJson() {
+    download(fileName, fileText);   
+}
+
 function download(filename, textInput) {
     var element = document.createElement('a');
     element.setAttribute('href','data:text/plain;charset=utf-8,' + encodeURIComponent(textInput));
