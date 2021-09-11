@@ -161,6 +161,10 @@ function generateAllArmor(storeArmor) {
     jsonT += "\t\"health\": \"" + hp + "\",\n"
     jsonT += "\t\"armor\": \"" + armor + "\",\n"
     jsonT += "\t\"resistance\": \"" + res + "\",\n"
+    if (hasAffix) {
+        jsonT += "\t\"affixGroup\": \"" + "globalAffixes" + "\",\n";
+        jsonT += "\t\"affixAmount\": \"" + affixAmt + "\",\n";
+    }
     jsonT += "\t\"stats\": {" + attLine + "},\n"
     jsonT += "\t\"type\": \"" + "equipment" + "\"\n"
     jsonT += "}";
@@ -307,6 +311,10 @@ function generate() {
     jsonT += "\t\"health\": \"" + hp + "\",\n"
     jsonT += "\t\"armor\": \"" + armor + "\",\n"
     jsonT += "\t\"resistance\": \"" + res + "\",\n"
+    if (hasAffix) {
+        jsonT += "\t\"affixGroup\": \"" + "globalAffixes" + "\",\n";
+        jsonT += "\t\"affixAmount\": \"" + affixAmt + "\",\n";
+    }
     jsonT += "\t\"stats\": {" + attLine + "},\n"
     jsonT += "\t\"type\": \"" + "equipment" + "\"\n"
     jsonT += "}";
