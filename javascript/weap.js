@@ -165,7 +165,7 @@ function generateWeap() {
             default:
                 attLine = "";
         }
-        if (weapArr.length == 0)
+        if (weapArr.length == 0 && attLine != "")
             attLine += "\n\t";
     }
     
