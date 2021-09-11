@@ -121,37 +121,37 @@ function generateWeap() {
         weapArr.splice(0,2);
         switch (attType) {
             case 'STR':
-                attLine += "\n\t\t\"strength\": " + attAmt
+                attLine += "\n\t\t\"strength\": " + attAmt;
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
             case 'DEX':
-                attLine += "\n\t\t\"dexterity\": " + attAmt
+                attLine += "\n\t\t\"dexterity\": " + attAmt;
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
             case 'AGI':
-                attLine += "\n\t\t\"agility\": " + attAmt
+                attLine += "\n\t\t\"agility\": " + attAmt;
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
             case 'VIT':
-                attLine += "\n\t\t\"vitality\": " + attAmt
+                attLine += "\n\t\t\"vitality\": " + attAmt;
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
             case 'END':
-                attLine += "\n\t\t\"endurance\": " + attAmt
+                attLine += "\n\t\t\"endurance\": " + attAmt;
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
             case 'INT':     
-                attLine += "\n\t\t\"intelligence\": " + attAmt
+                attLine += "\n\t\t\"intelligence\": " + attAmt;
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
             case 'SPR':
-                attLine += "\n\t\t\"spirit\": " + attAmt
+                attLine += "\n\t\t\"spirit\": " + attAmt;
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
