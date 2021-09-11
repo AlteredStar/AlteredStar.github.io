@@ -48,6 +48,8 @@ function generateAllArmor(storeArmor) {
     var attLine = "";
     var attType = "";
     var attAmt = 0;
+    var affixAmt = 0;
+    var hasAffix = false;
     
     var jsonT = "";
     
@@ -136,10 +138,14 @@ function generateAllArmor(storeArmor) {
                 if (armorArr.length != 0)
                     attLine += ",";
                 break;
+            case 'AFF':
+                affixAmt = attAmt;
+                hasAffix = true;
+                break;
             default:
                 attLine = "";
         }
-        if (armorArr.length == 0)
+        if (armorArr.length == 0 && attLine != "")
             attLine += "\n\t";
     }
      
@@ -188,6 +194,8 @@ function generate() {
     var attLine = "";
     var attType = "";
     var attAmt = 0;
+    var affixAmt = 0;
+    var hasAffix = false;
     
     var jsonT = "";
     
@@ -276,10 +284,14 @@ function generate() {
                 if (armorArr.length != 0)
                     attLine += ",";
                 break;
+            case 'AFF':
+                affixAmt = attAmt;
+                hasAffix = true;
+                break;
             default:
                 attLine = "";
         }
-        if (armorArr.length == 0)
+        if (armorArr.length == 0 && attLine != "")
             attLine += "\n\t";
     }
      
