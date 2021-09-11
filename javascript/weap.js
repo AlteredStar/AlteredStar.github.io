@@ -161,6 +161,7 @@ function generateWeap() {
             case 'MOD':
                 affixAmt = attAmt;
                 hasAffix = true;
+                break;
             default:
                 attLine = "";
         }
