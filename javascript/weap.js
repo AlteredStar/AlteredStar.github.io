@@ -24,13 +24,12 @@ function generateWeap() {
     var range = 0;
     var attackString = "";
     var knockBack = 0;
-    var affixAmt = 0;
-    var hasAffix = false;
-    
     
     var attLine = "";
     var attType = "";
     var attAmt = 0;
+    var affixAmt = 0;
+    var hasAffix = false;
     
     var jsonT = "";
     
@@ -220,6 +219,8 @@ function generateShield() {
     var attLine = "";
     var attType = "";
     var attAmt = 0;
+    var affixAmt = 0;
+    var hasAffix = false;
     
     //holds the json at end
     var jsonT = "";
@@ -297,6 +298,10 @@ function generateShield() {
                 attLine += "\n\t\t\"spirit\": " + attAmt
                 if (shieldArr.length != 0)
                     attLine += ",";
+                break;
+            case 'AFF':
+                affixAmt = attAmt;
+                hasAffix = true;
                 break;
             default:
                 attLine = "";
