@@ -104,6 +104,10 @@ function generate() {
     jsonT += "\t\"tier\": \"" + tier + "\",\n";
     jsonT += "\t\"level\": \"" + level + "\",\n";
     jsonT += "\t\"material\": \"" + material + "\",\n";
+    if (hasAffix) {
+        jsonT += "\t\"affixGroup\": \"" + "globalAffixes" + "\",\n";
+        jsonT += "\t\"affixAmount\": \"" + affixAmt + "\",\n";
+    }
     jsonT += "\t\"mainStats\": {" + attLine + "},\n";
     jsonT += "\t\"type\": \"" + type + "\"\n";
     jsonT += "}";
