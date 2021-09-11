@@ -24,6 +24,9 @@ function generateWeap() {
     var range = 0;
     var attackString = "";
     var knockBack = 0;
+    var affixAmt = 0;
+    var hasAffix = false;
+    
     
     var attLine = "";
     var attType = "";
@@ -155,6 +158,9 @@ function generateWeap() {
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
+            case 'MOD':
+                affixAmt = attAmt;
+                hasAffix = true;
             default:
                 attLine = "";
         }
@@ -178,6 +184,10 @@ function generateWeap() {
     else
         jsonT += "\t\"attackString\": " + null + ",\n";
     jsonT += "\t\"knockback\": \"" + knockBack + "\",\n";
+    if (hasAffix) {
+        jsonT += "\t\"affixGroup\": \"" + "globalAffixes" + "\",\n";
+        jsonT += "\t\"affixAmount\": \"" + affixAmt + "\",\n";
+    }
     jsonT += "\t\"stats\": {" + attLine + "},\n";
     jsonT += "\t\"type\": \"" + "weapon" + "\"\n";
     jsonT += "}";
