@@ -319,6 +319,10 @@ function generateShield() {
     jsonT += "\t\"material\": \"" + "shield" + "\",\n";
     jsonT += "\t\"block\": \"" + block + "\",\n";
     jsonT += "\t\"blockRecovery\": \"" + blockRec + "\",\n";
+    if (hasAffix) {
+        jsonT += "\t\"affixGroup\": \"" + "globalAffixes" + "\",\n";
+        jsonT += "\t\"affixAmount\": \"" + affixAmt + "\",\n";
+    }
     jsonT += "\t\"stats\": {" + attLine + "},\n";
     jsonT += "\t\"type\": \"" + "equipment" + "\"\n";
     jsonT += "}";
