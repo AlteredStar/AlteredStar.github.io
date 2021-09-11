@@ -158,7 +158,7 @@ function generateWeap() {
                 if (weapArr.length != 0)
                     attLine += ",";
                 break;
-            case 'MOD':
+            case 'AFF':
                 affixAmt = attAmt;
                 hasAffix = true;
                 break;
@@ -301,7 +301,7 @@ function generateShield() {
             default:
                 attLine = "";
         }
-        if (shieldArr.length == 0)
+        if (shieldArr.length == 0 && attLine != "")
             attLine += "\n\t";
     }
     
