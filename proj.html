@@ -25,19 +25,37 @@
 </head>
 
 <body>
-    <h1> Fuel Quote Form </h1>
-    
-    <form>
-        <label for="gallons">Gallons Requested:</label>
-        <input type="number" id="gallons" name="gallons">
-        
-        <label for="date">Delivery Date:</label>
-        <input type="date" id="delivery" name="delivery">
-    </form>
-    
+	<h1> Fuel Quote Form </h1>
+	
     <br />
-    
-    
+
+    <form>
+        <label for="gallons"> Gallons Requested: </label>
+        <input type="number" id="gallons" name="gallons" required>
+        
+        <br />
+		
+		<laber for="address"> Delivery Address: </label>
+		
+		<br />
+	    
+        <label for="date"> Delivery Date (mm/dd/yyyy): </label>
+        <input type="date" id="delivery" name="delivery" required>
+		
+		<br />
+		
+		<label for="pricePerGal"> Suggested Price / Gallon: </label>
+		
+		<br />
+		
+		<label for="totalPrice"> Total Price: </label>
+		
+		<br />
+		
+		<p> 
+			<button> Submit </button>
+		</p>
+    </form>
     
 </body>
     
