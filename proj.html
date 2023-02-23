@@ -25,39 +25,39 @@
 </head>
 
 <body>
-	<h1> Fuel Quote Form </h1>
+    <h1> Fuel Quote Form </h1>
 	
     <br />
 
     <form>
-        <label for="gallons"> Gallons Requested: </label>
-        <input type="number" id="gallons" name="gallons" required>
-        
+        <div class="form-group">
+			<label for="gallons">Gallons Requested</label>
+			<input type="number" class="form-control" id="gallons" placeholder="Enter gallons requested">
+        </div>
+
         <br />
-		
-		<laber for="address"> Delivery Address: </label>
-		<input type="hidden" id="address" name="address" value="">
-		
-		<br />
-	    
-        <label for="date"> Delivery Date (mm/dd/yyyy): </label>
-        <input type="date" id="delivery" name="delivery" required>
-		
-		<br />
-		
-		<label for="pricePerGal"> Suggested Price / Gallon: </label>
-		<input type="hidden" id="pricePerGal" name="pricePerGal" value="">
-		
-		<br />
-		
-		<label for="totalPrice"> Total Price: </label>
-		<input type="hidden" id="totalPrice" name="totalPrice" value="">
-		
-		<br />
-		
-		<p> 
-			<button> Submit </button>
-		</p>
+
+        <laber for="address"> Delivery Address: </label>
+        <input type="hidden" id="address" name="address" value="">
+
+        <br />
+
+            <label for="date"> Delivery Date (mm/dd/yyyy): </label>
+            <input type="date" id="delivery" name="delivery" required>
+
+        <br />
+
+        <label for="pricePerGal"> Suggested Price / Gallon: </label>
+        <input type="hidden" id="pricePerGal" name="pricePerGal" value="">
+
+        <br />
+
+        <label for="totalPrice"> Total Price: </label>
+        <input type="hidden" id="totalPrice" name="totalPrice" value="">
+
+        <br />
+
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
     
 	<script async src="./javascript/fuel_quote_form.js"></script>
