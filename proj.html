@@ -43,19 +43,26 @@
 			<br />
 			<div class="mx-auto" style="width:400px;">
 				<label for="date">Delivery Date (mm/dd/yyyy)</label>
-				<input type="date" id="delivery" required>
+				<div class="input-group date" id="delivery">
+					<input type="text" class="form-control" id="delivery" required>
+					<span class="input-group-append">
+						<span class="input-group-text bg-light d-block">
+							<i class="fa fa-calendar"></i>
+						</span>
+					</span>
+				</div>
 			</div>
 			<br />
 			<div class="mx-auto" style="width:400px;">
-				<span class="input-group-text">$</span>
 				<label for="pricePerGal">Suggested Price / Gallon</label>
+				<span class="input-group-text">$</span>
 				<input type="text" readonly class="form-control-plaintext" id="pricePerGal" value="X">
 				<span class="input-group-text">/ gallon</span>
 			</div>
 			<br />
 			<div class="mx-auto" style="width:400px;">
-				<span class="input-group-text">$</span>
 				<label for="totalPrice">Total Price</label>
+				<span class="input-group-text">$</span>
 				<input type="text" readonly class="form-control-plaintext" id="totalPrice" value="X">
 			</div>
 			<br />
