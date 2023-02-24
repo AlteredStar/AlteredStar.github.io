@@ -86,20 +86,20 @@
 			</div>
 			
 			<button type="button" class="btn btn-dark" id="submitQuote">Submit</button>
-			<p id="result">12</p>
+			<p id="result">13</p>
 		</form>
 	</div>
 
 	<hr />
 		
 	<script>
-		var gallons = document.getElementById('gallons');
 		//recieve address from database
 		var date = document.getElementById('deliveryDate');
 		
 		const getQuoteButton = document.getElementById('getQuote');
 		function get() {
-			document.getElementById('pricePerGal').value = 2; //temp val, calc with price module later on
+			var pricePerGal = document.getElementById('pricePerGal').value = 2; //temp val, calc with price module later on
+			var gallons = document.getElementById('gallons');
 			document.getElementById('totalPrice').value = gallons * pricePerGal;
 		}
 		
