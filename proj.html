@@ -70,7 +70,7 @@
 				<input type="text" readonly class="form-control" id="address2" value=" "><br>
 				
 				<label for="date">Delivery Date</label>
-				<input type="date" class="form-control" id="delivery" min="{{date | date:'MM/dd/yyyy'}}" required><br>
+				<input type="date" class="form-control" id="deliveryDate" min="{{date | date:'MM/dd/yyyy'}}" required><br>
 				
 				<label for="pricePerGal">Suggested Price / Gallon</label>
 				<div class="input-group mb-3">
@@ -91,8 +91,8 @@
 	<hr />
 		
 	<script>
-		let gallons = document.getElementById('gallons');
-		let date = document.getElementById('delivery');
+		var gallons = document.getElementById('gallons');
+		var date = document.getElementById('deliveryDate');
 		//let pricePerGal = document.getElementById('pricePerGal');
 		//temp val, calc with price module later on
 		document.getElementById("pricePerGal").value = 2;
