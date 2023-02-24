@@ -35,24 +35,28 @@
 				<label for="gallons" class="form-label">Gallons Requested</label>
 				<input type="number" class="form-control" id="gallons" placeholder="Enter gallons requested" required><br>
 				
-				<laber for="address">Delivery Address</label>
-				<input type="text" readonly class="form-control" id="address" value=" "><br>
+				<laber for="address">Delivery Address 1</label>
+				<input type="text" readonly class="form-control" id="address1" value=" "><br>
+				
+				<laber for="address">Delivery Address 2</label>
+				<input type="text" readonly class="form-control" id="address2" value=" "><br>
 				
 				<label for="date">Delivery Date</label>
 				<input type="date" class="form-control" id="delivery" min="@DateTime.Today.ToString("mm/dd/yy")" required><br>
 				
 				<label for="pricePerGal">Suggested Price / Gallon</label>
 				<div class="input-group mb-3">
-					<input type="text" readonly class="form-control" id="pricePerGal" value="">
+					<input type="number" readonly class="form-control" id="pricePerGal" value="">
 				</div><br>
 				
 				<label for="totalPrice">Total Price</label>
 				<div class="input-group mb-3">
-					<input type="text" readonly class="form-control" id="totalPrice" value="">
+					<input type="number" readonly class="form-control" id="totalPrice" value="">
 				</div><br>
 			</div>
 			
 			<button type="submit" class="btn btn-dark" onclick="submit()">Submit</button>
+			<p id="result"></p>
 		</form>
 	</div>
 
@@ -64,7 +68,7 @@
 		const pricePerGal = document.getElementById('pricePerGal');
 		
 		submit() {
-			
+			document.getElementById("result").innerHTML = gallons * pricePerGal;		
 		}
 		
 	</script>
