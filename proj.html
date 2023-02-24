@@ -35,23 +35,30 @@
 				<label for="gallons" class="form-label">Gallons Requested</label>
 				<input type="number" class="form-control" id="gallons" placeholder="Enter gallons requested">
 				<br />
+				
 				<laber for="address">Delivery Address</label>
-				<input type="text" readonly class="form-control-plaintext" id="address" value="1234 Street">
+				<!-- <div class="opacity-100"> -->
+					<input type="text" readonly class="form-control" id="address" value="1234 Street">
+				<!-- </div> -->
 				<br />
+				
 				<label for="date">Delivery Date (mm/dd/yyyy)</label>
 				<input type="date" class="form-control" id="delivery" required>
 				<br />
+				
 				<label for="pricePerGal">Suggested Price / Gallon</label>
 				<div class="input-group mb-3">
-					<input type="text" readonly class="form-control-plaintext" id="pricePerGal" value="X">
+					<input type="text" readonly class="form-control" id="pricePerGal" value="X">
 				</div>
 				<br />
+				
 				<label for="totalPrice">Total Price</label>
 				<div class="input-group mb-3">
-					<input type="text" readonly class="form-control-plaintext" id="totalPrice" value="X">
+					<input type="text" readonly class="form-control" id="totalPrice" value="X">
 				</div>
 			</div>
 			<br />
+			
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
