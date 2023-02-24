@@ -93,10 +93,12 @@
 	<script>
 		let gallons = document.getElementById('gallons');
 		let date = document.getElementById('delivery');
-		let pricePerGal = document.getElementById('pricePerGal');
+		//let pricePerGal = document.getElementById('pricePerGal');
+		//temp val, calc with price module later on
+		let pricePerGal = 2;
 		
 		submit() {
-			document.getElementById("result").innerHTML = gallons * 2;		
+			document.getElementById("result").value = gallons * pricePerGal;		
 		}
 		
 	</script>
