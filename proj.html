@@ -84,7 +84,7 @@
 			</div>
 			
 			<button type="button" class="btn btn-dark" id="submitButton">Submit</button>
-			<p id="res">4</p>
+			<p id="result">4</p>
 		</form>
 	</div>
 
@@ -92,14 +92,18 @@
 		
 	<script>
 		var gallons = document.getElementById('gallons');
+		//recieve address from database
 		var date = document.getElementById('deliveryDate');
 		//var pricePerGal = document.getElementById('pricePerGal');
 		//temp val, calc with price module later on
-		document.getElementById("pricePerGal").value = 2;
+		document.getElementById('pricePerGal').value = 2;
+		document.getElementById('totalPrice').value = gallons * pricePerGal;
+		
 		const submitButton = document.getElementById('submitButton');
 		
 		function submit() {
-			document.getElementById("pricePerGal").value = 4;
+			document.getElementById('result').innerHTML = "Success!";
+			//save form to database
 		}
 		
 		submitButton.addEventListener('click', submit);
