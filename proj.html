@@ -39,7 +39,7 @@
 				<input type="text" readonly class="form-control" id="address" value=" "><br>
 				
 				<label for="date">Delivery Date</label>
-				<input type="date" class="form-control" id="delivery" required><br>
+				<input type="date" class="form-control" id="delivery" min="@DateTime.Today.ToString("yyyy-MM-dd")" required><br>
 				
 				<label for="pricePerGal">Suggested Price / Gallon</label>
 				<div class="input-group mb-3">
@@ -52,18 +52,20 @@
 				</div><br>
 			</div>
 			
-			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" class="btn btn-dark" onclick="submit()">Submit</button>
 		</form>
 	</div>
 
 	<hr />
 		
 	<script>
-		let gallons = document.getElementById('gallons');
-		let date = document.getElementById('delivery');
-		let pricePerGal = document.getElementById('pricePerGal');
+		const gallons = document.getElementById('gallons');
+		const date = document.getElementById('delivery');
+		const pricePerGal = document.getElementById('pricePerGal');
 		
-		document.getElementById('totalPrice').innerHTML = $10;
+		submit() {
+			
+		}
 		
 	</script>
 	
