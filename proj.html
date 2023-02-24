@@ -102,14 +102,14 @@
 			document.getElementById('pricePerGal').value = 2; //temp val, calc with price module later on
 			document.getElementById('totalPrice').value = gallons * pricePerGal;
 		}
-		getQuote.addEventListener('click', getQuote);
-		
 		
 		const submitQuote = document.getElementById('submitQuote');
 		function submit() {
 			document.getElementById('result').innerHTML = "Success!";
 			//save form to database
 		}
+		
+		getQuote.addEventListener('click', getQuote);
 		submitQuote.addEventListener('click', submit);
 		
 	</script>
