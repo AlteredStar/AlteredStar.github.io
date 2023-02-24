@@ -63,6 +63,8 @@
 		let date = document.getElementById('delivery');
 		let pricePerGal = document.getElementById('pricePerGal');
 		
+		document.getElementById('totalPrice').innerText = $10;
+		
 		gallons.addEventListener('change', (e)=>{
 			let gallonsVal = e.target.value;
 			document.getElementById('totalPrice').innerText = gallonsVal * pricePerGal;
