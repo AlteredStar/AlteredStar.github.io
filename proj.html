@@ -76,7 +76,7 @@
 				
 				<label for="pricePerGal">Suggested Price / Gallon</label>
 				<div class="input-group mb-3">
-					<input type="number" readonly class="form-control" id="pricePerGal" value="">
+					<input type="number" readonly class="form-control" id="pricePerGallon" value="">
 				</div><br>
 				
 				<label for="totalPrice">Total Price</label>
@@ -86,7 +86,7 @@
 			</div>
 			
 			<button type="button" class="btn btn-dark" id="submitQuote">Submit</button>
-			<p id="result">13</p>
+			<p id="result">14</p>
 		</form>
 	</div>
 
@@ -98,9 +98,10 @@
 		
 		const getQuoteButton = document.getElementById('getQuote');
 		function get() {
-			var pricePerGal = document.getElementById('pricePerGal').value = 2; //temp val, calc with price module later on
-			var gallons = document.getElementById('gallons');
-			document.getElementById('totalPrice').value = gallons * pricePerGal;
+			document.getElementById('pricePerGallon').value = 2; //temp val, calc by calling price module later on
+			var pricePerGal = document.getElementById('pricePerGallon').value; 
+			var gal = document.getElementById('gallons').value;
+			document.getElementById('totalPrice').value = gal * pricePerGal;
 		}
 		
 		const submitQuoteButton = document.getElementById('submitQuote');
