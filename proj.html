@@ -33,12 +33,12 @@
 		<form>
 			<div class="mx-auto" style="width:400px;">
 				<label for="gallons" class="form-label">Gallons Requested</label>
-				<input type="number" class="form-control" id="gallons" placeholder="Enter gallons requested"><br>
+				<input type="number" class="form-control" id="gallons" placeholder="Enter gallons requested" required><br>
 				
 				<laber for="address">Delivery Address</label>
 				<input type="text" readonly class="form-control" id="address" value=" "><br>
 				
-				<label for="date">Delivery Date (mm/dd/yyyy)</label>
+				<label for="date">Delivery Date</label>
 				<input type="date" class="form-control" id="delivery" required><br>
 				
 				<label for="pricePerGal">Suggested Price / Gallon</label>
@@ -49,8 +49,8 @@
 				<label for="totalPrice">Total Price</label>
 				<div class="input-group mb-3">
 					<input type="text" readonly class="form-control" id="totalPrice" value=" ">
-				</div>
-			</div><br>
+				</div><br>
+			</div>
 			
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
@@ -59,6 +59,13 @@
 	<hr />
 		
 	<script>
+		let gallons = document.getElementById('gallons');
+		let date = document.getElementById('delivery');
+		
+		gallons.addEventListener('change', (e)=>{
+			let gallonsVal = e.target.value;
+			document.getElementById('totalPrice').innerText = gallonsVal * pricePerGal;
+		}
 		
 	</script>
 	
