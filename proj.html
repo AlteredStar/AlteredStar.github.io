@@ -97,7 +97,9 @@ Important deliverables:
 	<hr />
 		
 	<script>
+		var quoteGen = false;
 		//recieve address from database
+		
 		
 		const getQuoteButton = document.getElementById('getQuote');
 		function get() {
@@ -105,24 +107,35 @@ Important deliverables:
 			var pricePerGal = document.getElementById('pricePerGallon').value; 
 			var gal = document.getElementById('gallons').value;
 			document.getElementById('totalPrice').value = gal * pricePerGal;
+			var quoteGen = true;
 		}
 		
 		const submitQuoteButton = document.getElementById('submitQuote');
 		function submit() {
 			let valid = true;
+			let galValid = true;
+			let dateValid = true;
+			
+			if (gal < 1)
+				galValid = false;
+			
 			var date = new Date(document.getElementById("deliveryDate").value);
 			let today = new Date();
 			if (date.getFullYear < today.getFullYear)
-				valid = false;
+				valid = dateValid = false;
 			else if (date.getMonth()+1 < today.getMonth()+1)
-				valid = false;
+				valid = dateValid = false;
 			else if (date.getDate()+1 < today.getDate()+1)
-				valid = false;
+				valid = dateValid = false;
 			
-			if (valid)
+			if (valid && quoteGen)
 				document.getElementById('result').innerHTML = "Success!";
-			else
-				document.getElementById('result').innerHTML = "Invalid Delivery Date";
+			else if (!quoteGen)
+				document.getElementById('result').innerHTML = "Cannot submit, must generate quote";
+			else if (!galValid)
+				document.getElementById('result').innerHTML = "Cannot submit, invalid amount of gallons requested";
+			else if (!dateValid)
+				document.getElementById('result').innerHTML = "Cannot submit, invalid delivery date";
 			//save form to database
 		}
 		
