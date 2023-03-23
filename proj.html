@@ -98,7 +98,6 @@ Important deliverables:
 		
 	<script>
 		//recieve address from database
-		const date = new Date(document.getElementById('deliveryDate'));
 		
 		const getQuoteButton = document.getElementById('getQuote');
 		function get() {
@@ -110,8 +109,20 @@ Important deliverables:
 		
 		const submitQuoteButton = document.getElementById('submitQuote');
 		function submit() {
-			//document.getElementById('result').innerHTML = "Success!";
-			document.getElementById('result').innerHTML = date.getMonth() + 1;
+			let valid = true;
+			var date = new Date(document.getElementById("deliveryDate").value);
+			let today = new Date();
+			if (date.getFullYear < today.getFullYear)
+				valid = false;
+			else if (date.getMonth()+1 < today.getMonth()+1)
+				valid = false;
+			else if (date.getDate()+1 < today.getDate()+1)
+				valid = false;
+			
+			if (valid)
+				document.getElementById('result').innerHTML = "Success!";
+			else
+				document.getElementById('result').innerHTML = "Invalid Delivery Date";
 			//save form to database
 		}
 		
