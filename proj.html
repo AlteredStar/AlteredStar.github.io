@@ -98,6 +98,7 @@ Important deliverables:
 		
 	<script>
 		var quoteGen = false;
+		var gal = 0;
 		//recieve address from database
 		
 		
@@ -105,9 +106,9 @@ Important deliverables:
 		function get() {
 			document.getElementById('pricePerGallon').value = 2; //temp val, calc by calling price module later on
 			var pricePerGal = document.getElementById('pricePerGallon').value; 
-			var gal = document.getElementById('gallons').value;
+			gal = document.getElementById('gallons').value;
 			document.getElementById('totalPrice').value = gal * pricePerGal;
-			var quoteGen = true;
+			quoteGen = true;
 		}
 		
 		const submitQuoteButton = document.getElementById('submitQuote');
