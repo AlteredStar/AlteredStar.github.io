@@ -101,7 +101,6 @@ Important deliverables:
 		var gal = 0;
 		//recieve address from database
 		
-		
 		const getQuoteButton = document.getElementById('getQuote');
 		function get() {
 			document.getElementById('pricePerGallon').value = 2; //temp val, calc by calling price module later on
@@ -110,6 +109,10 @@ Important deliverables:
 			document.getElementById('totalPrice').value = gal * pricePerGal;
 			quoteGen = true;
 		}
+		
+		document.getElementById("gallons").addEventListener("change", function() {
+    			quoteGen = false;
+		});
 		
 		const submitQuoteButton = document.getElementById('submitQuote');
 		function submit() {
