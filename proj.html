@@ -98,7 +98,7 @@ Important deliverables:
 		
 	<script>
 		//recieve address from database
-		var date = document.getElementById('deliveryDate');
+		const date = document.getElementById('deliveryDate');
 		
 		const getQuoteButton = document.getElementById('getQuote');
 		function get() {
@@ -111,7 +111,7 @@ Important deliverables:
 		const submitQuoteButton = document.getElementById('submitQuote');
 		function submit() {
 			//document.getElementById('result').innerHTML = "Success!";
-			document.getElementById('result').innerHTML = date;
+			document.getElementById('result').innerHTML = date.getMonth() + 1;
 			//save form to database
 		}
 		
