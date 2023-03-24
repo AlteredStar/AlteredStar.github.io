@@ -109,7 +109,7 @@ Important deliverables:
 			gal = document.getElementById('gallons').value;
 			document.getElementById('totalPrice').value = gal * pricePerGal;
 			quoteGen = true;
-		});
+		}
 		
 		document.getElementById("gallons").addEventListener("change", function check() {
     			quoteGen = false;
@@ -141,7 +141,7 @@ Important deliverables:
 			else if (!quoteGen)
 				document.getElementById('result').innerHTML = "Cannot submit, must generate quote.";
 			//save form to database
-		});
+		}
 		
 		getQuoteButton.addEventListener('click', get);
 		submitQuoteButton.addEventListener('click', submit);
