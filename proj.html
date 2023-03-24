@@ -131,7 +131,9 @@ Important deliverables:
 			
 			var date = new Date(document.getElementById("deliveryDate").value);
 			let today = new Date();
-			if (!date || (date.getFullYear < today.getFullYear) || (date.getMonth()+1 < today.getMonth()+1) || (date.getDate()+1 < today.getDate()+1))
+			if (!document.getElementById("deliveryDate").value)
+				valid = dateValid = false;
+			else if (!date || (date.getFullYear < today.getFullYear) || (date.getMonth()+1 < today.getMonth()+1) || (date.getDate()+1 < today.getDate()+1))
 				valid = dateValid = false;
 			
 			if (valid && quoteGen)
