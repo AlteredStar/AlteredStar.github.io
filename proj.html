@@ -1,153 +1,194 @@
-<!--
-- Fuel Quote Form with following fields: (We are not building pricing module yet)
-	- Gallons Requested (numeric, required)
-	- Delivery Address (Non-editable, comes from client profile)
-	- Delivery Date (Calender, date picker)
-	- Suggested Price / gallon (numeric non-editable, price will be calculated by Pricing Module - we are not building pricing module yet)
-	- Total Amount Due (numeric non-editable, calculated (gallons * price))
-
-Important deliverables:
-	- You should have validations in place for required fields, field types, and field lengths in backend code as well. 
-	- All backend code should be covered by unit tests. Code coverage should be grater than 80%. 
-	- Research how to run the code coverage reports. Each IDE has plugins to generate reports. Here are few pointers. https://stackify.com/code-coverage-tools/
-	- All front end should be connected to back end. Form data should be populated from backend. Backend should receive data from front end, validate, and prepare it to persist to DB.
-	- WE ARE NOT IMPLEMENTING DB yet. For this assignment you can hard code the values.
--->
-
 <!DOCTYPE html>
 <html lang="en">
-    
-<head>
-	<title>Fuel Quote Form</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-	
-	<link rel="icon" href="imgs/29.png"/>
-	<meta property="og:type" content="website">
-    <meta property="og:site_name" content="Software Design Project Group 29">
-	<meta property="og:title" content="Fuel Quote Form">
-	<meta property="og:description" content="">
-	<meta property="og:image" content="imgs/29.png">
-</head>
 
-<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top mb-5">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="main-hub.html">Home</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+	<head>
+		<title>Fuel Quote Form</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,
+			shrink-to-fit=no">
 
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="fuel-quote-form.html">New Fuel Quote</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="fuel-quote-history.html">Fuel Quote History</a>
-					</li>
-				</ul>
-				<ul class="navbar-nav ms-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="profile-management.html">Your Profile</a>
-					</li>
-				</u1>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous">
+
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="Software Design Project Group 29">
+		<meta property="og:title" content="Fuel Quote Form">
+		<meta property="og:description" content="">
+		<meta property="og:image" content="https://imgur.com/ywRGTMU">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top
+			mb-5">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="/main">Group 29</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="/main">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/fuelquote">New Fuel Quote</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/fuelhistory">Fuel Quote History</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="/profile">Your Profile</a>
+						</li>
+					</u1>
+				</div>
 			</div>
-		</div>
-    </nav> 
-	
-	<section class="my-5"><br><br>
+		</nav>
 
-	<div class="container-lg text-center px-5">
-		<h1>Fuel Quote Form</h1><br>
-		<form>
-			<div class="mx-auto" style="width:400px;">
-				<label for="gallons" class="form-label">Gallons Requested</label>
-				<input type="number" class="form-control" id="gallons" min="1" placeholder="Enter gallons requested" required><br>
-				
-				<laber for="address">Delivery Address 1</label>
-				<input type="text" readonly class="form-control" id="address1" value=" "><br>
-				
-				<laber for="address">Delivery Address 2</label>
-				<input type="text" readonly class="form-control" id="address2" value=" "><br>
-				
-				<label for="date">Delivery Date</label>
-				<input type="date" class="form-control" id="deliveryDate" min="{{date | date:'MM/dd/yyyy'}}" required><br>
-				
-				<button type="button" class="btn btn-dark" id="getQuote">Get Quote</button><br><br>
-				
-				<label for="pricePerGal">Suggested Price / Gallon</label>
-				<div class="input-group mb-3">
-					<input type="number" readonly class="form-control" id="pricePerGallon" value="">
-				</div><br>
-				
-				<label for="totalPrice">Total Price</label>
-				<div class="input-group mb-3">
-					<input type="number" readonly class="form-control" id="totalPrice" value="">
-				</div><br>
+		<section class="my-5"><br><br>
+
+			<div class="container-lg text-center px-5">
+				<h1>Fuel Quote Form</h1>
+				<br>
+				<form action="/submit" method="POST">
+					<div class="mx-auto" style="width:400px;">
+						<label for="gallons" class="form-label">Gallons Requested</label>
+						<input type="number" class="form-control" id="gallons" name="gallons"
+							placeholder="Enter gallons requested" required>
+						<p id="gallonsVal"></p>
+						<br>
+
+						<label for="address1" class="form-label">Delivery Address 1</label>
+						<input type="text" readonly class="form-control" id="address1" name="address1"
+							placeholder="Address 1">
+						<br>
+
+						<label for="address2" class="form-label">Delivery Address 2</label>
+						<input type="text" readonly class="form-control" id="address2" name="address2"
+							placeholder="Address 2">
+						<br>
+
+						<label for="deliveryDate" class="form-label">Delivery Date</label>
+						<input type="date" class="form-control" id="deliveryDate"
+							name="deliveryDate" min="{{date | date:'YYYY-MM-DD'}}" required>
+						<p id="dateVal"></p>
+						<br>
+						
+						<button type="button" class="btn btn-dark" id="getQuote">Get Quote</button>
+						<br><br>
+						
+						<label for="pricePerGallon" class="form-label">Suggested Price / Gallon</label>
+						<div class="input-group mb-3">
+							<input type="number" readonly class="form-control" id="pricePerGallon"
+								name="pricePerGallon" value="">
+						</div>
+
+						<label for="totalPrice" class="form-label">Total Price</label>
+						<div class="input-group mb-3">
+							<input type="number" readonly class="form-control" id="totalPrice"
+								name="totalPrice" value="">
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-dark" id="submitQuote">Submit</button>
+					<p id="result"></p>
+				</form>
+
 			</div>
-			
-			<button type="button" class="btn btn-dark" id="submitQuote">Submit</button>
-			<p id="result"></p>
-			
-		</form>
-	</div>
 
-	<hr />
+			<hr />
 		
-	<script>
-		var quoteGen = false;
-		var gal = 0;
-		//recieve address from database
-		
-		const getQuoteButton = document.getElementById('getQuote');
-		function get() {
-			document.getElementById('pricePerGallon').value = 2; //temp val, calc by calling price module later on
-			var pricePerGal = document.getElementById('pricePerGallon').value; 
-			gal = document.getElementById('gallons').value;
-			document.getElementById('totalPrice').value = gal * pricePerGal;
-			quoteGen = true;
-		}
-		
-		document.getElementById("gallons").addEventListener("change", function {
-    			quoteGen = false;
-		});
-		
-		const submitQuoteButton = document.getElementById('submitQuote');
-		function submit() {
-			console.log("TEST");
-			let valid = true;
-			let galValid = true;
-			let dateValid = true;
+		<script src="pricingmodule.js"></script>
+		<script>
+			const gallons = document.getElementById("gallons");
+			const date = document.getElementById("deliveryDate");
+			const address1 = document.getElementById("address1");
+			const state = document.getElementById("state");
+			let inTexas = false;
+			let hasHist = false;
 			
-			if (gal < 1)
-				valid = galValid = false;
-			
-			const dateInput = document.getElementById('deliveryDate');
-			var date = new Date(dateInput.value);
-			let today = new Date();
+			/*
+			fetch('http://localhost:3000/api/address', {
+				method: 'GET'
+			})
+			.then(res => res.json())
+			.then(data => {
+				console.log('done');
+				address1.value = data.addresses.address1;
+				state.value = data.addresses.state;
+				if (data.addresses.state == "TX")
+					inTexas = true;
+				if (data.priceHist.totalPrice > 0)
+					hasHist = true;
+			});
+			*/
+			//front end validation
+			gallons.addEventListener("input", (event) => {
+				let text;
+				if (isNaN(gallons.value) || gallons.value <= 0) {
+					text = "Must input a number greater than 0.";
+				} else {
+					text = "";
+				}
+				document.getElementById("gallonsVal").innerHTML = text;
+			});
+			//front end validation
+			date.addEventListener("input", (event) => {
+				let text;
+				let dateInput = new Date(date.value);
+				let today = new Date();
+				if (!dateInput || (dateInput.getFullYear < today.getFullYear) || (dateInput.getMonth()+1 < today.getMonth()+1) || (dateInput.getDate()+1 < today.getDate()+1)) {
+					text = "Must input a date greater than today.";
+				} else {
+					text = "";
+				}
+				document.getElementById("dateVal").innerHTML = text;
+			});
 
-			else if (!dateInput.value || (date.getFullYear < today.getFullYear) || (date.getMonth()+1 < today.getMonth()+1) || (date.getDate()+1 < today.getDate()+1))
-				valid = dateValid = false;
-			
-			if (valid && quoteGen)
-				document.getElementById('result').innerHTML = "Success!!";
-			else if (!dateValid)
-				document.getElementById('result').innerHTML = "Cannot submit, invalid delivery date.";
-			else if (!galValid)
-				document.getElementById('result').innerHTML = "Cannot submit, invalid amount of gallons requested.";
-			else if (!quoteGen)
-				document.getElementById('result').innerHTML = "Cannot submit, must generate quote.";
-			//save form to database
-		}
-		
-		getQuoteButton.addEventListener('click', get);
-		submitQuoteButton.addEventListener('click', submit);
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+			//pricing module
+			const price = new PricingModule(inTexas, hasHistory, false);
 
-</body>
-    
-</html>
+			const quote = document.getElementById("getQuote");
+			quote.addEventListener("click", function() {
+				if (gallons.value > 1000)
+					setGal(true);
+				let sugPrice = price.calcSugPrice;
+				document.getElementById("pricePerGallon").value = sugPrice;
+				document.getElementById("totalPrice").value = sugPrice * gallons.value;
+			});
+
+			const getQuoteBtn = document.getElementById("getQuote");
+			const submitBtn = document.getElementById("submitQuote");
+			const gallonsInput = document.getElementById("gallons");
+			const deliveryDateInput = document.getElementById("deliveryDate");
+
+			gallonsInput.addEventListener("input", toggleButtons);
+			deliveryDateInput.addEventListener("input", toggleButtons);
+
+			function toggleButtons() {
+				if (gallonsInput.value && deliveryDateInput.value) {
+					getQuoteBtn.disabled = false;
+					submitBtn.disabled = false;
+				} else {
+					getQuoteBtn.disabled = true;
+					submitBtn.disabled = true;
+				}
+			}
+		
+		</script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+			crossorigin="anonymous"></script>
+
+		</body>
+
+	</html>
