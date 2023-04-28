@@ -145,7 +145,7 @@
 				let text;
 				let dateInput = new Date(date.value);
 				let today = new Date();
-				if (!dateInput || (dateInput.getFullYear < today.getFullYear) || (dateInput.getMonth()+1 < today.getMonth()+1) || (dateInput.getDate()+1 < today.getDate()+1)) {
+				if (!dateInput || (dateInput.getFullYear < today.getFullYear) || (dateInput.getMonth()+1 < today.getMonth()+1)) {
 					text = "Must input a date greater than today.";
 				} else {
 					text = "";
@@ -154,7 +154,7 @@
 			});
 
 			//pricing module
-			const price = new PricingModule(inTexas, hasHistory, false);
+			const price = new PricingModule(inTexas, hasHist, false);
 
 			const quote = document.getElementById("getQuote");
 			quote.addEventListener("click", function() {
