@@ -82,6 +82,7 @@
 						<br>
 						
 						<button type="button" class="btn btn-dark" id="getQuote">Get Quote</button>
+						<p id="pressed"></p>
 						<br><br>
 						
 						<label for="pricePerGallon" class="form-label">Suggested Price / Gallon</label>
@@ -160,6 +161,7 @@
 				if (gallons.value > 1000)
 					setGal(true);
 				let sugPrice = price.calcSugPrice;
+				document.getElementById("pressed").innerHTML = "YES!";
 				document.getElementById("pricePerGallon").value = sugPrice;
 				document.getElementById("totalPrice").value = sugPrice * gallons.value;
 			});
